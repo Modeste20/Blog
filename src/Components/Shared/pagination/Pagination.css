@@ -1,0 +1,33 @@
+.pagination-container{
+    height:40px;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.pagination-container .pagination-item{
+    cursor:pointer;
+    width:33px;
+    height:33px;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    margin:0 5px;
+}
+
+.pagination-container .pagination-item a{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    width:95%;
+    height:95%;
+    margin-top:5px;
+}
+
+.pagination-container .pagination-item .arrow{
+    margin-top:8px;
+}
+
+.pagination-container .pagination-item.item-active{
+    background:#e5b4f7
+}

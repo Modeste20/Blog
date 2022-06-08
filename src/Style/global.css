@@ -1,0 +1,79 @@
+@import "./normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Lato:ital,wght@0,400;0,900;1,700;1,900&family=Mulish:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,800;1,900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&display=swap');
+@import "./custum.css";
+body,html{
+    font-family: 'DM Sans' !important;
+    font-size:16px !important;
+    overflow-x: hidden;
+    width:100% !important;
+    color:#1e3347 !important;
+}
+
+body.body-nav-open{
+    background-color: rgba(0,0,0,.3);
+}
+
+body.body-nav-open a:not(body.body-nav-open header a){
+    pointer-events: none;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.btn:focus,.btn-primary:focus,.btn-secondary:focus,input:focus,select:focus,textarea:focus{
+    box-shadow:none !important;
+}
+
+input::placeholder{
+    font-size:14px !important
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:Mulish !important
+}
+
+h1{
+    font-size:60px !important;
+}
+
+h2{
+    font-size:52px !important;
+    font-weight:900
+}
+
+h3{
+    font-size:44px !important;
+    font-weight:500
+}
+
+h4{
+    font-size:40px !important;
+    font-weight:700
+}
+
+a{
+    text-decoration: none !important;
+    color:#1e3347 !important;
+}
+
+/*Custum button*/
+
+.btn-btn{
+    background-image: linear-gradient(45deg,#4b9ce7,#d56ffa);
+    color:#02294d;
+}
+
+/*BreadCrumb style*/
+
+nav.breadcrumb ol{
+    display: flex !important;
+    padding-left:  0 !important;
+}
+
+nav.breadcrumb ol li.breadcrumb__item{
+    padding:5px 10px;
+}
+nav.breadcrumb ol li.breadcrumb__item .breadcrumb__link__active{
+    pointer-events: none !important;
+}

@@ -1,0 +1,92 @@
+.landry-portfolio-home .home-banner .banner-home{
+    background: url(./../images//banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding-top:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width:768px){
+    .landry-portfolio-home .home-banner .banner-home{
+        padding-top:0px !important;
+    }
+}
+
+@media all and (max-width:768px){
+    
+    .landry-portfolio-home .home-banner{
+        height: 128vh !important;
+    }
+
+    .landry-portfolio-home .home-banner .banner-home{
+        height: 128vh !important;
+    }
+}
+
+@media all and (max-width:500px){
+    
+    .landry-portfolio-home .home-banner .banner-home .title h1{
+        font-size:28px !important;
+        font-size:900 !important;
+    }
+}
+
+.landry-portfolio-home .home-banner .banner-home .title h1{
+    background: -webkit-linear-gradient(50deg,#d396e9,#1672af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landry-portfolio-home .home-banner .banner-home::after{
+    content: '';
+    position:absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+}
+
+.landry-portfolio-home .home-banner .banner-home .content a.link-about-modeste{
+    color: rgba(255, 255, 255, 0.89) !important;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+
+.landry-portfolio-home .home-banner .banner-home *{
+    color: rgba(255, 255, 255, 0.89);
+    z-index: 1;
+}
+
+.landry-portfolio-home .home-banner{
+    height:100vh;
+}
+
+/*
+    #Témoignages
+*/
+
+.landry-portfolio-home .temoignages {
+    background-color: #d486f075;
+}
+
+.landry-portfolio-home .temoignages .section-title{
+    width:250px;
+    margin:15px auto;
+    position:relative;
+    padding:35px 0 50px 0;
+}
+
+.landry-portfolio-home .temoignages .section-title h3{
+    font-size:20px !important;
+    font-weight:900;
+    text-transform: uppercase;
+}

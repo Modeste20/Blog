@@ -1,0 +1,15 @@
+.bread-crumb .bread{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bread-crumb{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bread-crumb .bread a[aria-current='page']{
+    pointer-events: none ;
+}

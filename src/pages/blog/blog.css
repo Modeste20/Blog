@@ -1,0 +1,64 @@
+.banner-blog{
+    height:100vh;/**728*/
+    
+}
+.banner-blog .banner-content h1{
+    text-align: center;
+}
+
+.banner-blog .banner-content .bread-crumb *{
+    color:rgba(253, 251, 253, 0.7) !important
+}
+
+.banner-blog .banner-blog-image{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index:-3;
+    bottom: 0;
+    height:inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url(./../../images/banner-blog-lg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-blog .banner-blog-image::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:100%;
+    width:100%;
+    bottom:0;
+    z-index:-2;
+    display: block;
+    background-color: rgba(0,0,0,.65);
+    
+}
+
+@media all and (max-width:900px){
+    .banner-blog .banner-blog-image{
+        background:url(./../../images/banner-blog-md.jpg);
+        background-size: cover;
+
+    }
+}
+/*
+@media all and (max-width:500px){
+    .banner-blog{
+        height: 500px;
+    }
+}*/
+
+/*
+    articles
+*/
+
+.articles{
+    padding:0 25px;
+}

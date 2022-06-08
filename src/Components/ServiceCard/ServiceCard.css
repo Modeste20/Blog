@@ -1,0 +1,32 @@
+.landry-services .services .service-card .card{
+    position: relative;
+}
+
+.landry-services .services .service-card .card .head-icn{
+    position:absolute;
+    width:60px;
+    height:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cf64f7e3;
+    left:50%;
+    top:-30px;
+    font-size:25px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.landry-services .services .service-card .card .head-icn svg{
+    transform:rotate(-45deg);
+    display:block;
+    width:80% !important;
+}
+
+.landry-services .services .service-card .card .card-title{
+    font-size:20px !important;
+    font-weight:600 !important;
+}
+
+.landry-services .services .service-card .card .card-title a{
+    color:#207ccc !important;
+}

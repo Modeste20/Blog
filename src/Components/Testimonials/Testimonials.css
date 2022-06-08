@@ -1,0 +1,10 @@
+.flex{
+    display: flex;
+    width:200%;
+}
+
+.testimonials {
+    padding-bottom: 100px;
+    width:100% !important;
+    overflow:hidden;
+}

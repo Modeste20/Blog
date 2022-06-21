@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // You can prepend it with any prefix you want
       path: `/blog/${(node && node.frontmatter && node.frontmatter.title) ? slugify(node.frontmatter.title,{lower:true}) : node.slug}`,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/BlogLayout/BlogLayout.js`),
+      component: path.resolve(`./src/Components/BlogLayout/BlogLayout.js`),
       // You can use the values in this context in
       // our page layout component
       context: { id: node.id },

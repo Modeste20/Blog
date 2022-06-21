@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import './../../Style/normalize.css'
+import './../../Style/custum.css'
 import "./../../Style/global.css"
 import './layout.css'
 import { useState } from 'react'
@@ -118,11 +120,11 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <header className={'header py-4 ' + (fixedHeader ? ' header-sticky ' : '') + (headerClass ? ' header-white ' : '')} id='header'>
+            <header className={'header' + (fixedHeader ? ' header-sticky ' : '') + (headerClass ? ' header-white ' : '')} id='header'>
                 <div className='container-md'>
                     <div className="row row-header justify-content-between align-items-center">
                         <div className="col-4 col-sm-3">
-                            <Link to='/' className='h4'>
+                            <Link to='/' className='h3'>
                                 Landry
                             </Link>
                         </div>
@@ -141,7 +143,7 @@ const Layout = ({ children }) => {
                                         <Link className="nav-link active" aria-current="page" to='/blog'>Blog</Link>
                                     </li>
                                     <li className="nav-item pb-4 py-sm-0 px-md-3  px-lg-4 px-2">
-                                        <Link className="nav-link active" aria-current="page" to='/modeste_djedemin' onClick={onClose}>A propos de moi</Link>
+                                        <Link className="nav-link active" aria-current="page" to='#biography' onClick={onClose}>A propos de moi</Link>
                                     </li>
                                     {/*<li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
                                     <DropDown title={'Nos services'} list={location} />
@@ -190,7 +192,7 @@ const Layout = ({ children }) => {
                             <nav className="nav">
                                 <ul>
                                     <li>
-                                        <Link to='/modeste-djedemin'>A propos de moi</Link>
+                                        <Link to='/about'>A propos de moi</Link>
                                     </li>
 
                                     <li>

@@ -5,7 +5,7 @@ import React from 'react'
 import Image from './../../images/author.png'
 import './TestimonialCard.css'
 
-const TestimonialCard = () => {
+const TestimonialCard = ({image,name,post,content}) => {
     return (
         <div className="testimonial-card">
             <div className="card-quotes-symbol">
@@ -21,18 +21,16 @@ const TestimonialCard = () => {
             </div>
             <div className="card-quote">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi suscipit aliquam, sunt labore consequuntur sequi itaque iste, fuga eos optio dicta laboriosam totam perferendis sapiente earum ex omnis ullam numquam?
+                    {content}
                 </p>
             </div>
             <div className="card-author text-center">
                 <div className="circle-image d-flex justify-content-center align-items-center">
-                    <img
-                        src={'https://images.unsplash.com/photo-1575846171058-979e0c211b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'}
-                        alt="" />
+                    <img src={image} alt={name} />
                 </div>
-                <div className="author-info">
-                    <h5>Landry Modeste</h5>
-                    <p>CEO de ModestEntreprise</p>
+                <div className="author-info mt-2 mb-4">
+                    <h5>{name}</h5>
+                    <p>{post}</p>
                 </div>
             </div>
         </div>

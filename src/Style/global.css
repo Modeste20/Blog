@@ -1,12 +1,73 @@
-@import "./normalize.css";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Lato:ital,wght@0,400;0,900;1,700;1,900&family=Mulish:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,800;1,900&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&display=swap');
-@import "./custum.css";
+/* Règle font-face*/
+
+
+/*DM Sans police pour le corps de texte*/
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/DMSans/dmsans-regular-webfont.woff2') format('woff2'),
+         url('./fonts/DMSans/dmsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Police Mulish pour les titres et les sous-titres*/
+
+@font-face {
+    font-family:'Mulish';
+    src: url('./fonts/Mulish/mulish-regular-webfont.woff2') format('woff2'),
+         url('./fonts/Mulish/mulish-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('./fonts/Mulish/mulish-semibold-webfont.woff2') format('woff2'),
+         url('./fonts/Mulish/mulish-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('./fonts/Mulish/mulish-bold-webfont.woff2') format('woff2'),
+         url('./fonts/Mulish/mulish-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('./fonts/Mulish/mulish-extrabold-webfont.woff2') format('woff2'),
+         url('./fonts/Mulish/mulish-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+
 body,html{
     font-family: 'DM Sans' !important;
-    font-size:16px !important;
+    font-size:10px !important;
     overflow-x: hidden;
     width:100% !important;
     color:#1e3347 !important;
+}
+
+body{
+    font-size:1.6rem !important;
 }
 
 body.body-nav-open{
@@ -26,7 +87,7 @@ ul,li{
 }
 
 input::placeholder{
-    font-size:14px !important
+    font-size:1.4rem !important
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -34,22 +95,66 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1{
-    font-size:60px !important;
+    font-size:3rem !important;
 }
 
 h2{
-    font-size:52px !important;
+    font-size:2.8rem !important;
     font-weight:900
 }
 
+h2.section-title{
+    margin:0;
+    padding-top:15px;
+    padding-bottom:18px;
+    margin-bottom:40px;
+    font-size:2.5rem !important;
+    position:relative;
+    color:var(--bs-secondary);
+}
+
+
+h2.section-title::before{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    display:block;
+    width:50px;
+    height:6px;
+    border-radius:15px;
+    background:var(--bs-secondary);
+}
+
 h3{
-    font-size:44px !important;
-    font-weight:500
+    font-size:2.4rem !important;
+    font-weight:900
 }
 
 h4{
-    font-size:40px !important;
+    font-size:2rem !important;
     font-weight:700
+}
+
+@media only screen and (min-width:501px){
+    h1{
+        font-size:6rem !important;
+    }
+    
+    h2{
+        font-size:3rem !important;
+        font-weight:900
+    }
+    
+    h3{
+        font-size:2.8rem !important;
+        font-weight:800
+    }
+    
+    h4{
+        font-size:2.5rem !important;
+        font-weight:700
+    }
 }
 
 a{

@@ -78,14 +78,12 @@ const Blog = ({ data }) => {
         <div className="container-md banner-content h-100 d-flex justify-content-center align-items-center">
           <div>
             <h1 style={{ zIndex: '2 !important', color: '#fdfbfdc2' }}>Blog</h1>
-            {/*<Breadcrumb location={location} crumbSeparator='>' crumbLabel="Blog" />*/}
             <BreadCrumb />
           </div>
-
         </div>
       </div>
 
-      <div className='row articles' id='articles'>
+      <div className='row articles pt-5' id='articles'>
         <section className="col-12 col-lg-8 list-articles px-2 py-5 ml-5">
           <div className="all-articles">
             {
@@ -103,7 +101,7 @@ const Blog = ({ data }) => {
         <aside className="col-12 col-lg-4 px-0">
           <BlogNavbar />
         </aside>
-        
+
       </div>
 
     </Layout>

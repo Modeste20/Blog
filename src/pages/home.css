@@ -1,5 +1,11 @@
+
+.landry-portfolio-home .home-banner{
+    height:100vh;
+}
+
+
 .landry-portfolio-home .home-banner .banner-home{
-    background: url(./../images//banner.jpg);
+    background: url(./../images/banner.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -11,6 +17,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.landry-portfolio-home .home-banner .banner-home *{
+    color: rgba(255, 255, 255, 0.89);
+    z-index: 1;
+}
+
+
+.landry-portfolio-home .home-banner .banner-home::after{
+    content: '';
+    position:absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
 }
 
 @media all and (min-width:768px){
@@ -30,12 +52,9 @@
     }
 }
 
-@media all and (max-width:500px){
-    
-    .landry-portfolio-home .home-banner .banner-home .title h1{
-        font-size:28px !important;
-        font-size:900 !important;
-    }
+
+.landry-portfolio-home .home-banner .banner-home .sub-title{
+    font-size:1.7rem;
 }
 
 .landry-portfolio-home .home-banner .banner-home .title h1{
@@ -44,31 +63,21 @@
   -webkit-text-fill-color: transparent;
 }
 
-.landry-portfolio-home .home-banner .banner-home::after{
-    content: '';
-    position:absolute;
-    top:0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .7);
+@media only screen and (min-width:501px) and (max-width:767px){
+    .landry-portfolio-home .home-banner .banner-home .title h1{
+       font-size:3.5rem !important
+    };
 }
 
 .landry-portfolio-home .home-banner .banner-home .content a.link-about-modeste{
     color: rgba(255, 255, 255, 0.89) !important;
     padding-top: 11px;
     padding-bottom: 11px;
+    font-size:1.6rem;
 }
 
 
-.landry-portfolio-home .home-banner .banner-home *{
-    color: rgba(255, 255, 255, 0.89);
-    z-index: 1;
-}
 
-.landry-portfolio-home .home-banner{
-    height:100vh;
-}
 
 /*
     #Témoignages
@@ -76,17 +85,61 @@
 
 .landry-portfolio-home .temoignages {
     background-color: #d486f075;
+    padding:65px 0 25px 0;
 }
 
-.landry-portfolio-home .temoignages .section-title{
-    width:250px;
-    margin:15px auto;
-    position:relative;
-    padding:35px 0 50px 0;
-}
-
-.landry-portfolio-home .temoignages .section-title h3{
-    font-size:20px !important;
-    font-weight:900;
+.landry-portfolio-home .temoignages h2{
+    font-size:18px !important;
+    text-align:center;
     text-transform: uppercase;
+}
+
+
+/* Biography*/
+
+.landry-portfolio-home .biography .landry-biography .biography-content p{
+    font-size:1.5rem;
+}
+
+.landry-portfolio-home .biography .biography-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:25px 0;
+}
+
+@media only screen and (min-width:361px){
+        
+    .landry-portfolio-home .biography .biography-image .image-container{
+        position:relative;
+    }
+
+    .landry-portfolio-home .biography .biography-image .image-container::before{
+        content:'';
+        position:absolute;
+        left:-50px;
+        right:-50px;
+        bottom: -20px;
+        top:-20px;
+        display:block;
+        width:auto;
+        border-radius:15px;
+        border:1px solid var(--bs-secondary);
+        height:auto;
+    }
+
+    .landry-portfolio-home .biography .biography-image .image-container::after{
+        content:'';
+        position:absolute;
+        left:-20px;
+        right:-20px;
+        bottom: -40px;
+        top:-40px;
+        display:block;
+        width:auto;
+        border-radius:15px;
+        border:1px solid var(--bs-secondary);
+        height:auto;
+    }
+
 }

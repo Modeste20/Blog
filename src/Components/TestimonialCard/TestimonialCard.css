@@ -1,28 +1,44 @@
 
 .testimonial-card{
-    border:3px solid #06447e;
-    border-radius:25px;
+    /*
     background: #c5e1fc8e;
+    box-shadow:0px 0px 100px rgba(0,0,0,.4);
+    */
+    border:1px solid #20486d;
+    border-radius:25px;
     padding:0 15px;
-    box-shadow:3px 3px 90px rgba(0,0,0,.3);
-    margin:10px 25px;
-    width:290px;
-}
-/*
-.testimonial-card .card-quotes-symbol {
-    font-size:70px;
+    margin:25px auto;
+    width:95%;
+    position:relative;
 }
 
-.testimonial-card .card-quotes-symbol svg{
-    background: -webkit-linear-gradient(50deg,#d396e9,#1672af) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+@media only screen and (min-width:501px){
+    .testimonial-card{
+        width:330px;
+        margin:30px 25px;
+    }
 }
-*/
+
+.testimonial-card .card-quotes-symbol{
+    margin-top:15px;
+}
+
+.testimonial-card .card-quote{
+    margin-bottom:200px;
+}
+
 .testimonial-card .card-quote p{
     font-size:15px;
     font-weight:500;
     color:#47065f;
+    margin-top:15px;
+    max-height:350px;
+}
+
+@media only screen and (min-width:501px){
+    .testimonial-card .card-quote p{
+        font-size:14px
+    }
 }
 
 .testimonial-card .card-author .circle-image{
@@ -30,7 +46,14 @@
     height:100px;
     margin:15px auto 5px auto;
     border-radius:50%;
-    border:8px solid #640985
+    /*border:8px solid #640985*/
+}
+
+.testimonial-card .card-author{
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:0;
 }
 
 .testimonial-card .card-author .author-info h5{

@@ -14,7 +14,7 @@ const Pagination = ({
     className=''
 }) => {
 
-    
+
     const paginationRange = usePagination({
         currentPage:currentPage,
         dataLength:totalCount,
@@ -95,7 +95,7 @@ const Pagination = ({
                 className={'pagination-item'}
                 onClick={onNext}
             >
-                <Link className="arrow right" onClick={
+                <Link className="arrow right" to='#articles' onClick={
 
                     (e) => {
                         if(currentPage === lastPage){

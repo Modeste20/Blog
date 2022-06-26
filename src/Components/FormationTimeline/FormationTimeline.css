@@ -1,0 +1,42 @@
+.formations-timeline{
+    position:relative;
+    margin:50px 0;
+    padding-top:25px
+}
+
+
+.formations-timeline::before{
+    content: '';
+    position:absolute;
+    display: block;
+    height:100%;
+    top:0;
+    left: 8px;
+    bottom:0;
+    width:3px;
+    background: #7a0ea293;
+}
+
+@media all and (min-width:701px){
+
+    .formations-timeline{
+        max-width:550px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+}
+
+@media all and (min-width:992px){
+
+    .formations-timeline{
+        width:980px;
+        max-width: 100%;
+        /*max-width:100%;*/
+    }
+
+    .formations-timeline::before{
+        left: 50%;
+    }
+
+}

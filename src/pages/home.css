@@ -143,3 +143,50 @@
     }
 
 }
+
+
+/* Portfolios */
+
+.landry-portfolio-home .portfolio h2.section-title{
+    margin-bottom:10px !important
+}
+
+.landry-portfolio-home .portfolio .portfolio-options{
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.landry-portfolio-home .portfolio .portfolio-options button{
+    background-color: transparent;
+    border:0;
+    padding:10px 8px;
+    font-weight:500;
+    font-size:1.7rem;
+}
+
+.landry-portfolio-home .portfolio .portfolio-options button.active{
+    color:var(--bs-secondary);
+    font-weight:900;
+    position:relative;
+    transition:.2s;
+}
+
+.landry-portfolio-home .portfolio .portfolio-options button.active::before{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:8px;
+    display: block;
+    width: 30px;
+    height:3px;
+    border-radius:20px;
+    background-color: var(--bs-secondary);
+}
+
+.landry-portfolio-home .portfolio .portfolio-options button abbr{
+    border:0;
+    cursor:pointer;
+    text-decoration: none;
+}

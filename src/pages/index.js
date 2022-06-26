@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import * as React from "react"
 import Carousel from "../Components/Carousel"
 import Layout from "../Components/Layout/Layout"
-import data from "../data/home"
+import data from "../data/testimonials_home_data"
 import Profil from './../images/Landry-avatar.png'
 import BiographyImage from './../images/biography-image.jpg'
 
@@ -11,43 +11,49 @@ import SkillCard from "../Components/SkillsCard/SkillCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons"
 import { hobbies, HobbyCard } from "../Components/HobbyCard/HobbyCard"
+import PROJECTS from "../data/portfolios_home_data"
+import ProjetCard from "../Components/ProjetCard/ProjetCard"
+import { useState } from "react"
+import { useMemo } from "react"
+import { useEffect } from "react"
+import FormationTimeline from "../Components/FormationTimeline/FormationTimeline"
 
 // markup
-const IndexPage = ( ) => {
+const IndexPage = () => {
 
   /* Afficher deux témoignages par div si nous sommes si un grand écran */
 
-  const [carousel_data,setData] = React.useState(null)
+  const [carousel_data, setData] = React.useState(null)
 
   const resizeCarousel = (windowSize) => {
-    if(windowSize>=768){
-        const datas = [
-            [
-              data[0],
-              data[1]
-            ],
-            [
-              data[2],
-              data[3]
-            ],
-            [
-              data[4],
-              data[5]
-            ]
-
+    if (windowSize >= 768) {
+      const datas = [
+        [
+          data[0],
+          data[1]
+        ],
+        [
+          data[2],
+          data[3]
+        ],
+        [
+          data[4],
+          data[5]
         ]
-        setData(datas)
-    } else{
+
+      ]
+      setData(datas)
+    } else {
       setData(null)
     }
-}
+  }
 
-/* Récupérer la largeur de la fenêtre au redimensionnement de l'écran et lorsque le composant est monté */
+  /* Récupérer la largeur de la fenêtre au redimensionnement de l'écran et lorsque le composant est monté */
 
-const [windowSize,setWindowSize] = React.useState(0)
-const handleWindowResize = React.useCallback(() => {
+  const [windowSize, setWindowSize] = React.useState(0)
+  const handleWindowResize = React.useCallback(() => {
 
-      setWindowSize(window.innerWidth);
+    setWindowSize(window.innerWidth);
 
   }, []);
 
@@ -60,11 +66,28 @@ const handleWindowResize = React.useCallback(() => {
     };
   }, [handleWindowResize]);
 
-  console.log('render',windowSize)
+  console.log('render', windowSize)
 
   React.useEffect(() => {
     resizeCarousel(windowSize)
-  },[windowSize])
+  }, [windowSize])
+
+  /* Filtrer les projets par catégories */
+
+  const [projectsData, setProjectsData] = useState(PROJECTS)
+
+  const filterProjects = (e, category) => {
+    const button_active = document.querySelector('.landry-portfolio-home .portfolio .portfolio-options button.active');
+    button_active.classList.remove('active');
+    e.currentTarget.classList.add('active')
+    setProjectsData(() => {
+       if (category) return PROJECTS.filter(c => c.category === category)
+    })
+  }
+
+  /* get portfolio data */
+
+  console.log('project',projectsData)
 
   return (
     <Layout>
@@ -121,7 +144,7 @@ const handleWindowResize = React.useCallback(() => {
                     </p>
                   </div>
                 </div>
-              
+
               </div>
 
               <div className="col-12 order-0 order-md-1 col-sm-10 col-md-5">
@@ -146,7 +169,7 @@ const handleWindowResize = React.useCallback(() => {
             <div className="hobbies">
               <div className="row">
                 {
-                  hobbies.map(({icon,title}) => <HobbyCard key={title.toLowerCase()} icon={icon} title={title} />)
+                  hobbies.map(({ icon, title }) => <HobbyCard key={title.toLowerCase()} icon={icon} title={title} />)
                 }
               </div>
             </div>
@@ -203,13 +226,57 @@ const handleWindowResize = React.useCallback(() => {
           </div>
         </section>
 
+        {/* Témoignages */}
 
         <section className='temoignages pb-5' id='temoignages'>
           <div className="container-md ">
-              <h2 className="">Les témoignages</h2>
+            <h2 className="">Les témoignages</h2>
             <Carousel data={carousel_data ? carousel_data : data} />
           </div>
         </section>
+
+        {/* Portfolios */}
+
+        <section className="portfolio mt-5 pt-5" id="portfolio">
+          <div className="container-md">
+            <h2 className="section-title">Projets réalisés</h2>
+            <div className="portfolio-options">
+              <button className="options-button active" onClick={(e) => filterProjects(e, '')}>
+                Tous
+              </button>
+              <button className="options-button" onClick={(e) => filterProjects(e, 'dev')}>
+                <abbr title="developpement web">Dev web</abbr>
+              </button>
+              <button className="options-button" onClick={(e) => filterProjects(e, 'seo')}>
+                <abbr title="Référencement naturel">SEO</abbr>
+              </button>
+            </div>
+
+            <div className="all-projects">
+              <div className="container-md">
+                <div className="row">
+                {
+                    projectsData.map(project => <ProjetCard {...project} key={project.title} />)
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Formations */}
+
+
+        <section className="formations" id="formations">
+          <div className="container-md">
+            <h2 className="section-title">
+              Mes formations
+            </h2>
+                <FormationTimeline />
+          </div>
+        </section>
+
+
       </div>
     </Layout>
   )

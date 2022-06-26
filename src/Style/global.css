@@ -60,12 +60,21 @@
 
 body,html{
     font-family: 'DM Sans' !important;
-    font-size:10px !important;
     overflow-x: hidden;
     width:100% !important;
     color:#1e3347 !important;
 }
 
+html{
+    font-size:10px !important;
+}
+/*
+@media only screen and (min-width:1650px){
+    html{
+        font-size: 13px !important;
+    }
+}
+*/
 body{
     font-size:1.6rem !important;
 }

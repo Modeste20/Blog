@@ -1,0 +1,50 @@
+
+
+@media only screen and (min-width:768px){
+    .projet-card .card:hover{
+        box-shadow: 0px 0px 100px rgba(0,0,0,.2);
+        transform: scale(1.05);
+    }
+    
+    .projet-card .card{
+        transition: .2s;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:992px){
+    .projet-card:nth-child(2n+1){
+        padding-left:0 !important;
+    }
+
+    .projet-card:nth-child(2n){
+        padding-right:0 !important
+    }
+}
+
+@media only screen and (min-width:993px){
+    .projet-card:nth-child(1),
+    .projet-card:nth-child(4){
+        padding-left:0 !important;
+    }
+
+    .projet-card:nth-child(2),
+    .projet-card:nth-child(5){
+        padding-left:15px !important;
+        padding-right:15px !important;
+    }
+
+    .projet-card:nth-child(3),
+    .projet-card:nth-child(6){
+        padding-right:0 !important
+    }
+}
+
+.projet-card .card .card-body h4{
+    font-size:1.4rem !important;
+    padding:3px 0;
+}
+
+.projet-card .card .card-body h3{
+    font-size:1.7rem !important;
+    font-weight:900 !important
+}

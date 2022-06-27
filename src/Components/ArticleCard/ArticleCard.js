@@ -26,9 +26,9 @@ const ArticleCard = ({ recentPost, category, date, title, className='', descript
                             </div>
 
                             <div className="card-date">
-                                <date datetime={date} className="">
+                                <time datetime={date} className="">
                                     {date}
-                                </date>
+                                </time>
                             </div>
 
                         </div>

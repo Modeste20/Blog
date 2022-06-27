@@ -14,9 +14,8 @@ import { hobbies, HobbyCard } from "../Components/HobbyCard/HobbyCard"
 import PROJECTS from "../data/portfolios_home_data"
 import ProjetCard from "../Components/ProjetCard/ProjetCard"
 import { useState } from "react"
-import { useMemo } from "react"
-import { useEffect } from "react"
 import FormationTimeline from "../Components/FormationTimeline/FormationTimeline"
+import BlogEntries from "../Components/BlogEntries/BlogEntries"
 
 // markup
 const IndexPage = () => {
@@ -81,13 +80,13 @@ const IndexPage = () => {
     button_active.classList.remove('active');
     e.currentTarget.classList.add('active')
     setProjectsData(() => {
-       if (category) return PROJECTS.filter(c => c.category === category)
+      if (category) return PROJECTS.filter(c => c.category === category)
     })
   }
 
   /* get portfolio data */
 
-  console.log('project',projectsData)
+  console.log('project', projectsData)
 
   return (
     <Layout>
@@ -226,15 +225,6 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* Témoignages */}
-
-        <section className='temoignages pb-5' id='temoignages'>
-          <div className="container-md ">
-            <h2 className="">Les témoignages</h2>
-            <Carousel data={carousel_data ? carousel_data : data} />
-          </div>
-        </section>
-
         {/* Portfolios */}
 
         <section className="portfolio mt-5 pt-5" id="portfolio">
@@ -255,7 +245,7 @@ const IndexPage = () => {
             <div className="all-projects">
               <div className="container-md">
                 <div className="row">
-                {
+                  {
                     projectsData.map(project => <ProjetCard {...project} key={project.title} />)
                   }
                 </div>
@@ -272,11 +262,23 @@ const IndexPage = () => {
             <h2 className="section-title">
               Mes formations
             </h2>
-                <FormationTimeline />
+            <FormationTimeline />
           </div>
         </section>
 
+        {/* Témoignages */}
 
+        <section className='temoignages pb-5' id='temoignages'>
+          <div className="container-md ">
+            <h2 className="">Les témoignages</h2>
+            <Carousel data={carousel_data ? carousel_data : data} />
+          </div>
+        </section>
+
+        {/* Articles populaires */}
+
+        <BlogEntries />
+        
       </div>
     </Layout>
   )

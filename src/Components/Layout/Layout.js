@@ -143,7 +143,7 @@ const Layout = ({ children }) => {
                                         <Link className="nav-link active" aria-current="page" to='/blog'>Blog</Link>
                                     </li>
                                     <li className="nav-item pb-4 py-sm-0 px-md-3  px-lg-4 px-2">
-                                        <Link className="nav-link active" aria-current="page" to='#biography' onClick={onClose}>A propos de moi</Link>
+                                        <Link className="nav-link active" aria-current="page" to='/#biography' onClick={onClose}>A propos de moi</Link>
                                     </li>
                                     {/*<li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
                                     <DropDown title={'Nos services'} list={location} />

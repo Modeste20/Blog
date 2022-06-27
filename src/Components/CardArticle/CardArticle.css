@@ -1,0 +1,65 @@
+.card-article .article-content{
+    padding:8px 0;
+}
+
+.card-article .article-content .content-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap
+}
+
+.card-article .article-content .content-head .date{
+    font-size:1.3rem;
+    font-weight:500;
+}
+
+.card-article .article-content .category-title{
+    padding:5px 8px;
+    border-radius:20px;
+    background-color: #f1dff8bb ;
+    color:#7B0EA2;
+    border:2px solid #570b73;
+    display: inline-block;
+    margin:10px 0;
+    font-size:1.3rem;
+    font-weight:800;
+}
+
+.card-article .article-content .article-title{
+    font-size:1.8rem !important;
+    padding:5px 0;
+}
+
+.card-article .article-content .article-title a{
+    transition: .2s;
+}
+
+.card-article .article-content .article-title a:hover{
+    color:#7B0EA2 !important;
+}
+
+.card-article .article-content .article-description{
+    font-size:1.5rem !important;
+}
+
+@media only screen and (min-width:768px){
+    .article:first-child{
+        padding-left:0 !important
+    }
+
+    .article:last-child{
+        padding-right:0 !important
+    }
+
+    .article:nth-child(2){
+        padding-right:15px !important;
+        padding-left:15px !important
+    }
+}
+
+@media only screen and (max-width:992px){
+    .article .card-article{
+        margin-bottom:28px !important
+    }
+}

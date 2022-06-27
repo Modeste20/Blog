@@ -186,7 +186,7 @@ const Contact = () => {
                                     }
                                 </div>
 
-                                <button className="btn btn-btn mt-2 mb-5 px-4 py-2" type='submit' onClick={onSubmit}>Envoyer</button>
+                                <button className="btn btn-btn mt-3 mb-5 px-5 py-3" type='submit' onClick={onSubmit}>Envoyer</button>
                             </form>
                         </div>
                     </div>

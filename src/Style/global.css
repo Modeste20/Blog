@@ -79,6 +79,10 @@ body{
     font-size:1.6rem !important;
 }
 
+select,option,*::placeholder{
+    font-size:1.4rem !important;
+}
+
 body.body-nav-open{
     background-color: rgba(0,0,0,.3);
 }

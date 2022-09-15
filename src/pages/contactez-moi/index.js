@@ -4,10 +4,8 @@ import './contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarker, faPhone } from '@fortawesome/free-solid-svg-icons'
 import isEmail from 'validator/lib/isEmail'
-import { navigate } from "@reach/router"
 import { useState } from 'react'
 import Banner from '../../Components/Shared/Banner/Banner'
-import Recpacha from './Recpatcha/Recpacha'
 
 const Contact = () => {
 

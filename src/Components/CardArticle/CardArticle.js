@@ -15,17 +15,17 @@ const getCategory = (category) => {
     }
 }
 
-const CardArticle = ({ url, image_data, image_alt, category, date, title, description }) => {
+const CardArticle = ({blog, url, image_data, image_alt, category, date, title, description }) => {
 
     const image = getImage(image_data)
 
     return (
-        <div className="article col-12 mx-auto col-sm-9 col-md-6 col-lg-4 px-sm-5">
-            <div className="card-article">
-                <div className="article-img">
-                    <GatsbyImage image={image} alt={image_alt} />
+        <div className={"article "+(!description ? " post-sidebar ":" ") + (blog ? " mx-auto " : "col-12 mx-auto col-sm-9 col-md-6 col-lg-4 px-sm-5")}>
+            <div className={" card-article " + (blog ? "row mx-auto justify-content-center" : "")}>
+                <div className={" article-img " +(blog ? "col-12 col-sm-9 col-md-6 col-lg-5" : "")}>
+                    <GatsbyImage image={image} alt={image_alt}  />
                 </div>
-                <div className="article-content">
+                <div className={" article-content "+(blog ? "col-12 col-sm-9 col-md-6 col-lg-7" : "")}>
                     <div className="content-head">
                         <div className="category-title">
                             {getCategory(category)}
@@ -43,11 +43,14 @@ const CardArticle = ({ url, image_data, image_alt, category, date, title, descri
                             {title}
                         </Link>
                     </h4>
-                    <p className="article-description">
+                    {
+                        description && <p className="article-description">
                         {
                             description
                         }
                     </p>
+                    }
+                    
                 </div>
             </div>
         </div>

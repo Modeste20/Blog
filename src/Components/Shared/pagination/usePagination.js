@@ -17,7 +17,8 @@ const usePagination = ({
     dataLength,
     dataPerPage,
     siblingCount,
-    currentPage
+    currentPage,
+    datas
 }) => {
 
     const PaginationRange = useMemo(() => {
@@ -75,7 +76,7 @@ const usePagination = ({
             return [firstPageIndex, DOTS, ...middleRange, DOTS, lastPageIndex];
         }
 
-    }, [dataLength, dataPerPage, siblingCount, currentPage])
+    }, [dataLength, dataPerPage, siblingCount, currentPage,datas])
 
     return PaginationRange
 

@@ -11,7 +11,7 @@ const Services = () => {
             <div className="landry-services">
                 <Banner title={'Services'} className='banner-services' />
                 <div className="container-md services">
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center mb-5 pb-5">
                         <ServiceCard icon={faHtml5} title={'Title1'} link='/' className={"card-web"}>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis provident dolorum vero autem reprehenderit nemo magnam. At esse ex voluptates expedita veritatis facere, repellat pariatur dolores laudantium, eos excepturi sint!

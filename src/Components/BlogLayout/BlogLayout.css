@@ -1,0 +1,44 @@
+.blog-article{
+    width:100%;
+    margin:100px 0 50px 0;
+    padding:30px 12px;
+}
+
+.blog-article h1{
+    font-size:2.5rem !important;
+    font-weight:800 !important;
+}
+
+.blog-article .article-information {
+    margin:15px 0 25px 0;
+}
+
+.blog-article .article-banner {
+    margin-bottom:20px;
+}
+
+@media only screen and (min-width:601px){
+    .blog-article h1{
+        font-size:3rem !important;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .blog-article{
+        width:80%;
+        padding-left:0;
+        padding-right:0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .blog-article{
+        max-width:850px;
+        width:auto;
+    }
+    .blog-article h1{
+        font-size:3.5rem !important;
+    }
+}

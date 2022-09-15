@@ -31,19 +31,20 @@
 }
 
 .carousel-testimonials .carousel-arrow{
-    display:none;
-}
-
-@media only screen and (min-width:501px){
-    .carousel-testimonials .carousel-arrow{
         display: block;
         position:absolute;
-        top:50%;
-        transform: translatey(-50%);
+        top:100%;
         cursor:pointer;
         width:30px;
         height:30px;
         font-size:25px;
+        z-index: 3;
+}
+
+@media only screen and (min-width:501px){
+    .carousel-testimonials .carousel-arrow{
+        top:50%;
+        transform: translatey(-50%);
     }
 }
 

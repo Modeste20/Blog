@@ -11,7 +11,8 @@ const Pagination = ({
     siblingCount = 1,
     currentPage,
     pageSize,
-    className=''
+    datas,
+    className='',
 }) => {
 
 
@@ -19,7 +20,8 @@ const Pagination = ({
         currentPage:currentPage,
         dataLength:totalCount,
         siblingCount:siblingCount,
-        dataPerPage:pageSize
+        dataPerPage:pageSize,
+        datas:datas
     });
 
     console.log('rage',paginationRange)

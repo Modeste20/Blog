@@ -152,7 +152,7 @@ const Layout = ({ children }) => {
                                         <Link className="nav-link active" style={{ display: 'inline-block' }} onClick={onClose} aria-current="page" to='/services'>Mes services</Link>
                                     </li>
                                     <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
-                                        <Link className="nav-link active btn btn-primary px-2" style={{ display: 'inline-block' }} onClick={onClose} aria-current="page" to='/contactez-moi'>Contactez-moi</Link>
+                                        <Link className="nav-link active btn btn-btn px-3 py-2" style={{ display: 'inline-block',color:'red !important' }} onClick={onClose} aria-current="page" to='/contactez-moi'>Contactez-moi</Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -161,16 +161,24 @@ const Layout = ({ children }) => {
                 </div>
             </header>
 
+
+
             <main>
                 {children}
             </main>
+
+
             <footer className='footer' id='footer'>
                 <div className="container-md">
                     <div className='row'>
                         <div className='col-12 mx-auto col-sm-6 col-md-6 col-lg-3 pb-3 footer-div footer-links'>
+                            
                             <h5>Liens</h5>
+
                             <nav className="nav">
+
                                 <ul>
+
                                     <li>
                                         <Link to='/modeste-djedemin'>A propos de moi</Link>
                                     </li>
@@ -184,6 +192,7 @@ const Layout = ({ children }) => {
                                     </li>
 
                                 </ul>
+
                             </nav>
                         </div>
 

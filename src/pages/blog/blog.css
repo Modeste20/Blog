@@ -61,3 +61,31 @@
 .articles{
     padding:0 25px;
 }
+
+@media only screen and (min-width:768px){
+    .articles .all-articles .article .card-article{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .articles .all-articles .article {
+        margin-bottom:80px;
+    }
+
+    .articles .all-articles .article {
+        margin-bottom:80px;
+    }
+}
+
+
+@media only screen and (max-width:767px){
+
+    .articles .all-articles .article .article-img {
+        padding:0;
+    }
+
+    .articles .all-articles .article .article-img img{
+        object-fit: cover !important;
+        max-width:100% !important
+    }
+}

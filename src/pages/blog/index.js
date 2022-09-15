@@ -1,14 +1,14 @@
 import { useLocation } from '@reach/router'
 import { graphql, Link } from 'gatsby'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Layout from "../../Components/Layout/Layout"
 import './blog.css'
 import BlogNavbar from '../../Components/BlogNavbar/BlogNavbar'
-import ArticleCard from '../../Components/ArticleCard/ArticleCard'
 import { BreadCrumb } from '../../Components/Shared/BreadCrumb/BreadCrum'
 import queryString from 'query-string'
 import Pagination from '../../Components/Shared/pagination/Pagination'
-import { useMemo } from 'react'
+import CardArticle from '../../Components/CardArticle/CardArticle'
+import slugify from 'slugify'
 
 let PageSize = 3;
 
@@ -25,25 +25,39 @@ const Blog = ({ data }) => {
   const [articles, setArticles] = useState(data.allMdx.edges)
   const [datas, setDatas] = useState([])
 
-  console.log('article-length',articles.length)
+  console.log('article-length', datas)
 
   const currentTableData = () => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    if(articles && Array.isArray(articles)){
-      return articles.slice(firstPageIndex, lastPageIndex);
-    } else{
+    const search = queryString.parse(location.search)
+
+    setArticles(data.allMdx.edges)
+
+    if (articles && Array.isArray(articles)) {
+      if (search.categorie) {
+
+        const sectionElement = document.getElementById('articles')
+        if (sectionElement) {
+          window.scrollTo(0, sectionElement.offsetTop)
+        }
+        const dat = articles.filter(({node}) => getCategory(node.frontmatter.category) === search.categorie);
+        console.log('dat',dat)
+
+        return dat.slice(firstPageIndex, lastPageIndex)
+      } else{
+        return articles.slice(firstPageIndex, lastPageIndex);
+      }
+    } else {
       return []
     }
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     setDatas(currentTableData)
-  },[currentPage])
+  }, [currentPage,location.search])
 
-  useEffect(() =>{
-    console.log('d',datas,currentPage)
-  },[currentPage])
+    console.log('d', datas)
 
 
   const getCategory = (c) => {
@@ -55,12 +69,12 @@ const Blog = ({ data }) => {
     }
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     const search = queryString.parse(location.search)
     setArticles(data.allMdx.edges)
     if (search.categorie) {
       setArticles(c => {
-        return c.filter(d => d.node && getCategory(d.node.frontmatter.category) === search.categorie)
+        return c.filter(({node}) => getCategory(node.frontmatter.category) === search.categorie)
       })
     }
     const sectionElement = document.getElementById('articles')
@@ -68,6 +82,7 @@ const Blog = ({ data }) => {
       window.scrollTo(0, sectionElement.offsetTop)
     }
   }, [location.search])
+  */
 
   return (
     <Layout>
@@ -86,9 +101,27 @@ const Blog = ({ data }) => {
       <div className='row articles pt-5' id='articles'>
         <section className="col-12 col-lg-8 list-articles px-2 py-5 ml-5">
           <div className="all-articles">
-            {
+            {/*
               datas.length ? datas.map(({ node }) => <ArticleCard className={''} title={node.frontmatter.title} category={node.frontmatter.category} key={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} />) : <h5>Aucun articles</h5>
+            */}
+
+            <div className='container-md'>
+
+            {
+              datas.length ? datas.map(({ node: { frontmatter: { title, image_hero, image_hero_alt, category, date, description } } }) => (
+                <CardArticle
+                  blog
+                  url={slugify(title,{lower:true})}
+                  image_data={image_hero}
+                  image_alt={image_hero_alt}
+                  category={category}
+                  date={date}
+                  title={title}
+                  description={description}
+                  key={title}
+                />)) : <h5>Aucun articles</h5>
             }
+            </div>
           </div>
           <Pagination
             className=" pagination-bar "
@@ -96,6 +129,7 @@ const Blog = ({ data }) => {
             totalCount={articles ? articles.length : 0}
             pageSize={PageSize}
             onPageChange={setCurrentPage}
+            datas={datas}
           />
         </section>
         <aside className="col-12 col-lg-4 px-0">
@@ -117,6 +151,12 @@ query{
           category
           description
           date(formatString: "LL", locale: "fr-FR")
+          image_hero_alt
+          image_hero {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         body
       }

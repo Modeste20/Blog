@@ -2,27 +2,36 @@
     padding-right:12px !important;
 }
 
+.blog-navbar section h5{
+    font-size:1.7rem !important
+}
+
 .blog-navbar .hr{
     width:100%;
-    height:3px;
-    opacity:.3;
-    color:inherit
+    height:0.75px;
+    background: #302a328a;
+    margin-top:20px;
 }
 
 .blog-navbar .input-search{
     width:90%;
     margin:50px 0 35px 0 !important;
     position:relative !important;
-    padding-right:41px !important;
+    padding-right:10px !important
 }
+
 .blog-navbar .input-search input{
+    padding:10px 8px;
     border-radius: 0 !important;
-    border-right:none !important
+    border-right:none !important;
+    font-size:1.37rem;
 }
 .blog-navbar .input-search .btn{
     position:absolute !important;
-    right:0;
+    right:-25px;
     top:0;
+    height:42.55px;
+    width:35px;
     border-radius:0 !important
 }
 

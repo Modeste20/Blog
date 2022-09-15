@@ -5,7 +5,7 @@ import './ProjetCard.css'
 const ProjetCard = ({ url,image,date,title,description,image_alt }) => {
 
     return (
-        <article className='projet-card col-12 mx-auto col-sm-9 col-md-6 col-lg-4 px-sm-5'>
+        <article className='projet-card my-5 col-12 mx-auto col-sm-9 col-md-6 col-lg-4 px-sm-5'>
             <Link to={url || ''}>
                 <div className="card border-0">
                     <img src={image} className="card-img-top" alt={image_alt} />

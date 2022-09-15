@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import delve from 'dlv'
 import CardArticle from '../CardArticle/CardArticle'
+import slugify from 'slugify'
 
 const BlogEntries = () => {
 
@@ -46,7 +47,7 @@ const BlogEntries = () => {
                             {
                                 data.map(({ node: { frontmatter: { title, category, description, date, image_hero_alt, image_hero } } }) => {
                                     return (
-                                        <CardArticle url={'/'} image_data={image_hero} category={category} image_alt={image_hero_alt} title={title} description={description} date={date} />
+                                        <CardArticle url={'/blog/'+slugify(title,{lower:true})} image_data={image_hero} category={category} image_alt={image_hero_alt} title={title} description={description} date={date} />
                                     )
                                 })
                             }

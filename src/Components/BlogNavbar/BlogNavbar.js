@@ -2,7 +2,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'gatsby'
 import React from 'react'
-import ArticleCard from '../ArticleCard/ArticleCard'
+import RecentPost from '../RecentPost/RecentPost'
 import './BlogNavbar.css'
 
 const categories = [
@@ -33,7 +33,7 @@ const BlogNavbar = () => {
             <section className="categories pb-4">
                 <h5>Les différentes catégories</h5>
                 <div className="hr"></div>
-                <nav>
+                <nav className='mt-5'>
                     <ul>
                         {
                             categories.map(categorie => <li key={categorie.search}><Link to={categorie.search ? '?categorie='+categorie.search : ''}>{categorie.title}</Link></li>)
@@ -42,16 +42,8 @@ const BlogNavbar = () => {
                 </nav>
             </section>
 
-            <section className="recent-posts">
-                <h5>Les articles récents</h5>
-                <div className="hr"></div>
-                <hr />
-                <div className="list-recent-post">
-                    <ArticleCard recentPost />
-                    <ArticleCard recentPost />
-                    <ArticleCard recentPost />
-                </div>
-            </section>
+            <RecentPost />
+
         </div>
     )
 }

@@ -65,6 +65,7 @@
     transition: .1s;
 }
 
+
 .header.header-white a:not(.header.header-white .dd-wrapper .dd-list  a , 
 .header.header-sticky a){
     color: rgba(255, 255, 255, 0.89) !important;
@@ -76,7 +77,7 @@
 
 
 .header .header-navbar .nav-item:last-child a{
-    color: rgba(255, 255, 255, 0.89) !important;
+    color:#fff  !important;
 }
 
 .header.header-sticky{
@@ -231,7 +232,8 @@ footer .footer-newsletter input{
     width:100%;
     padding-top:10px;
     padding-bottom:8px;
-    padding-right:50px
+    padding-right:50px;
+    font-size:1.37rem;
 }
 
 footer .footer-newsletter .input-newsletter .btn-news{
@@ -239,6 +241,7 @@ footer .footer-newsletter .input-newsletter .btn-news{
     right:0px;
     top:15px;
     bottom:15px;
+    width:40px;
 }
 
 @media all and (max-width:575px){

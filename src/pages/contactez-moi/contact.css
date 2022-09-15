@@ -84,3 +84,45 @@
         margin:0 auto 50px auto;
     }
 }
+
+.contact-landry .section-contact .form-section input,.contact-landry .section-contact .form-section textarea{
+    font-size:100%;
+}
+
+.contact-landry .section-contact .form-section textarea{
+   resize:none;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha .case{
+    display:flex;
+    align-items: center;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha span{
+    padding:0 5px;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha span + input[type='number']{
+    width:80px;
+    display: block;
+    text-align:center;
+    outline:0;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha span + input[type='number']::-webkit-outer-spin-button,
+.contact-landry .section-contact .form-section .field.field-recaptcha span + input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha span.number,
+.contact-landry .section-contact .form-section .field.field-recaptcha span + input[type='number']{
+    border:2px solid #3d2246c7;
+    border-radius:3px;
+    padding:5px 13px;
+}
+
+.contact-landry .section-contact .form-section .field.field-recaptcha span.number{
+    background-color: #dfd1e4c7;
+}
+

@@ -2,10 +2,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'gatsby'
 import React from 'react'
-import RecentPost from '../RecentPost/RecentPost'
+import {useNavigate,navigate} from '@reach/router'
 import './BlogNavbar.css'
 
-const categories = [
+const CATEGORIES = [
     {
         search:'',
         title:"Tous"
@@ -20,7 +20,34 @@ const categories = [
     }
 ]
 
-const BlogNavbar = () => {
+const possibleValuesForSearch = [...new Set(CATEGORIES.map(category => category.search))]
+
+const BlogNavbar = ({category}) => {
+
+
+
+    const filterArticles = async (e,search) => {
+        e.preventDefault();
+        if(search && search !== category){
+            //window.scrollTo(0,document.getElementById('articles').offsetTop - 40);
+            await navigate('?categorie='+search)
+        }
+
+    }
+
+    console.log(possibleValuesForSearch)
+
+    const className = (search,i) => {
+        if(category !== undefined && search === category){
+            return 'is-active'
+        }
+        if(!category){
+            return i === 0 ? 'is-active' : ''
+        }
+        return ''
+    }
+
+
     return (
         <div className="blog-navbar">
             <div className="input-search">
@@ -36,13 +63,13 @@ const BlogNavbar = () => {
                 <nav className='mt-5'>
                     <ul>
                         {
-                            categories.map(categorie => <li key={categorie.search}><Link to={categorie.search ? '?categorie='+categorie.search : ''}>{categorie.title}</Link></li>)
+                            CATEGORIES.map((categorie,index) => <li key={categorie.search}><Link className={className(categorie.search,index)} to={categorie.search ? '?categorie='+categorie.search : ''}>{categorie.title}</Link></li>)
                         }
                     </ul>
                 </nav>
             </section>
 
-            <RecentPost />
+            {/*<RecentPost />*/}
 
         </div>
     )

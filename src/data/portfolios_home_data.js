@@ -6,7 +6,7 @@ const PROJECTS = [
         category:'dev',
         image_alt:'Projet 1',
         image:Image,
-        title:'Site ecommerce',
+        title:'Projet 1',
         date:{
             begin:{
                 datetime:'2021-04',
@@ -40,7 +40,7 @@ const PROJECTS = [
         category:'dev',
         image_alt:'Projet 3',
         image:Image,
-        title:'Site ecommerce 2022',
+        title:'Projet 3',
         date:{
             begin:{
                 datetime:'2021-04',
@@ -57,7 +57,7 @@ const PROJECTS = [
         category:'dev',
         image_alt:'Projet 1',
         image:Image,
-        title:'Site ecommerce',
+        title:'Projet 4',
         date:{
             begin:{
                 datetime:'2021-04',
@@ -74,7 +74,7 @@ const PROJECTS = [
         category:'dev',
         image_alt:'Projet 1',
         image:Image,
-        title:'Site ecommerce',
+        title:"Projet 5",
         date:{
             begin:{
                 datetime:'2021-04',
@@ -91,7 +91,7 @@ const PROJECTS = [
         category:'dev',
         image_alt:'Projet 1',
         image:Image,
-        title:'Site ecommerce',
+        title:'Projet 6',
         date:{
             begin:{
                 datetime:'2021-04',

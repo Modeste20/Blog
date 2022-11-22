@@ -19,9 +19,9 @@ const BlogLayout = ({ data }) => {
           Publié le <strong>{delve(data,'mdx.frontmatter.date')}</strong> par <strong>{delve(data,'mdx.frontmatter.author') || "Landry Modeste"}</strong>
         </div>
         <div className="article-banner">
-          <GatsbyImage image={image} alt={delve(data,'mdx.frontmatter.image_hero_alt')}  />
+          <GatsbyImage image={image} alt={delve(data,'mdx.frontmatter.image_hero_alt')} />
         </div>
-        <MdxProvider>
+        <MdxProvider> 
             <MDXRenderer>
               {delve(data,'mdx.body')}
             </MDXRenderer>
@@ -47,7 +47,10 @@ const BlogLayout = ({ data }) => {
           }
           image_hero_large {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(
+                layout:FULL_WIDTH,
+                aspectRatio:1.67
+              )
             }
           }
         }

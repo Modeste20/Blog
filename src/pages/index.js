@@ -7,10 +7,10 @@ import Profil from './../images/Landry-avatar.png'
 import BiographyImage from './../images/biography-image.jpg'
 
 import './home.css'
-import SkillCard from "../Components/SkillsCard/SkillCard"
+import SkillCard, { SKILLS } from "../Components/SkillsCard/SkillCard"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHtml5 } from "@fortawesome/free-brands-svg-icons"
-import { hobbies, HobbyCard } from "../Components/HobbyCard/HobbyCard"
+import { faCentercode, faHtml5 } from "@fortawesome/free-brands-svg-icons"
+import { HOBBIES, HobbyCard } from "../Components/HobbyCard/HobbyCard"
 import PROJECTS from "../data/portfolios_home_data"
 import ProjetCard from "../Components/ProjetCard/ProjetCard"
 import { useState } from "react"
@@ -20,7 +20,7 @@ import BlogEntries from "../Components/BlogEntries/BlogEntries"
 // markup
 const IndexPage = () => {
 
-  /* Afficher deux témoignages par div si nous sommes si un grand écran */
+  /* Afficher deux témoignages par div si nous sommes sur un grand écran */
 
   const [carousel_data, setData] = React.useState(null)
 
@@ -81,6 +81,7 @@ const IndexPage = () => {
     e.currentTarget.classList.add('active')
     setProjectsData(() => {
       if (category) return PROJECTS.filter(c => c.category === category)
+      return PROJECTS
     })
   }
 
@@ -92,6 +93,7 @@ const IndexPage = () => {
     <Layout>
       <div className="landry-portfolio-home">
 
+        {/* BANNIERE */}
 
         <div className="home-banner">
           <div className="banner-home">
@@ -113,7 +115,7 @@ const IndexPage = () => {
                     <p className="my-3">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad minima inventore facilis laborum qui corrupti veniam eos numquam porro eligendi. Natus nihil unde eum est repellat! Dolores cum a autem!
                     </p>
-                    <Link to="/articles" className="btn btn-secondary mt-4 px-4 link-about-modeste">En savoir plus</Link>
+                    <Link to="#biography" className="btn btn-secondary mt-4 px-4 link-about-modeste">En savoir plus</Link>
                   </div>
                 </div>
               </div>
@@ -121,7 +123,7 @@ const IndexPage = () => {
           </div>
         </div>
 
-        {/* Biography */}
+        {/* BIOGRAPHY*/}
 
         <section id="biography" className="biography py-5 my-5">
           <div className="container-md">
@@ -157,7 +159,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* Hobbies */}
+        {/* HOBBIES */}
 
         <section className="hobby mt-5 pt-5" id="hobby">
           <div className="container-md">
@@ -168,14 +170,14 @@ const IndexPage = () => {
             <div className="hobbies">
               <div className="row">
                 {
-                  hobbies.map(({ icon, title }) => <HobbyCard key={title.toLowerCase()} icon={icon} title={title} />)
+                  HOBBIES.map(({ icon, title }) => <HobbyCard key={title.toLowerCase()} icon={icon} title={title} />)
                 }
               </div>
             </div>
           </div>
         </section>
 
-        {/* Skills */}
+        {/* SKILLS */}
 
         <section className="skills my-5 py-5" id="skills">
           <div className="container-md">
@@ -183,49 +185,19 @@ const IndexPage = () => {
               Mes compétences
             </h2>
 
-            <div className="all-skillspt-5">
+            <div className="all-skills">
               <div className="row justify-content-between">
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
 
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
+                {
+                  SKILLS.map(({className,title,icon,children}) => <SkillCard key={className} children={children} icon={icon} title={title} className={'skill '+className} />)
+                }
 
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
-
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
-
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
-
-                <SkillCard className={'skill-html5'} title={'HTML5 , CSS et Javascript'} icon={<FontAwesomeIcon icon={faHtml5} />}>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat iste quas impedit enim debitis alias! Possimus asperiores ab deserunt id debitis aperiam reprehenderit, accusamus distinctio corrupti expedita earum in?
-                  </p>
-                </SkillCard>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Portfolios */}
+        {/* PORTFOLIOS */}
 
         <section className="portfolio mt-5 pt-5" id="portfolio">
           <div className="container-md">
@@ -240,13 +212,19 @@ const IndexPage = () => {
               <button className="options-button" onClick={(e) => filterProjects(e, 'seo')}>
                 <abbr title="Référencement naturel">SEO</abbr>
               </button>
+              <button className="options-button" onClick={(e) => filterProjects(e, 'ui')}>
+                <abbr title="Référencement naturel">Design</abbr>
+              </button>
             </div>
 
-            <div className="all-projects">
+            <div className="all-projects pt-2">
               <div className="container-md">
                 <div className="row">
                   {
-                    projectsData.map(project => <ProjetCard {...project} key={project.title} />)
+                    projectsData.length ? projectsData.map(project => <ProjetCard {...project} key={project.title} />)
+                    : <p className="text-center py-5 my-5">
+                        Aucun projet n'a été réalisé pour cette catégorie
+                    </p>
                   }
                 </div>
               </div>
@@ -254,7 +232,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* Formations */}
+        {/* FORMATIONS*/}
 
 
         <section className="formations" id="formations">
@@ -266,16 +244,16 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* Témoignages */}
+        {/* TEMOIGNAGES */}
 
         <section className='temoignages pb-5' id='temoignages'>
           <div className="container-md ">
-            <h2 className="">Les témoignages</h2>
+            <h2>Les témoignages</h2>
             <Carousel data={carousel_data ? carousel_data : data} />
           </div>
         </section>
 
-        {/* Articles populaires */}
+        {/* ARTICLES POPULAIRES */}
 
         <BlogEntries />
         

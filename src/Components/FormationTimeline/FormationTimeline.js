@@ -1,8 +1,54 @@
 import React from 'react'
 import CardFormation from './CardFormation/CardFormation'
 import './FormationTimeline.css'
+import slugify from 'slugify'
 
-const table = Array.from({length:5},i => i)
+const FORMATIONS = [
+  {
+    period:'2021 - 2022',
+    title:'Développeur frontend',
+    children:(
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla provident,
+        tempora non rem voluptatibus eos distinctio? Ex earum libero accusantium minima ab.
+        Sit ducimus dolor dolorum expedita vero magni optio.
+      </p>
+    )
+  },
+  {
+    period:'2021 - 2022',
+    title:'Développeur frontend',
+    children:(
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla provident,
+        tempora non rem voluptatibus eos distinctio? Ex earum libero accusantium minima ab.
+        Sit ducimus dolor dolorum expedita vero magni optio.
+      </p>
+    )
+  },
+  {
+    period:'2021 - 2022',
+    title:'Développeur frontend',
+    children:(
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla provident,
+        tempora non rem voluptatibus eos distinctio? Ex earum libero accusantium minima ab.
+        Sit ducimus dolor dolorum expedita vero magni optio.
+      </p>
+    )
+  },
+  {
+    period:'2021 - 2022',
+    title:'Développeur frontend',
+    children:(
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla provident,
+        tempora non rem voluptatibus eos distinctio? Ex earum libero accusantium minima ab.
+        Sit ducimus dolor dolorum expedita vero magni optio.
+      </p>
+    )
+  }
+]
 
 const FormationTimeline = () => {
 
@@ -10,7 +56,7 @@ const FormationTimeline = () => {
 
     <div className="formations-timeline">
         {
-            table.map((c,index) => <CardFormation index={index} />)
+            FORMATIONS.map((c,index) => <CardFormation {...c} key={slugify(c.title.toLowerCase())} index={index} />)
         }
     </div>
 

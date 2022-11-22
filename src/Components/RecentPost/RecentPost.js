@@ -4,6 +4,7 @@ import delve from 'dlv'
 import CardArticle from '../CardArticle/CardArticle'
 import "./RecentPost.css"
 import slugify from 'slugify'
+import moment from 'moment'
 
 const RecentPost = () => {
 
@@ -15,7 +16,7 @@ const RecentPost = () => {
               frontmatter {
                 title
                 category
-                date(formatString: "LL", locale: "fr-FR")
+                date
                 image_hero_alt
                 image_hero {
                   childImageSharp {
@@ -47,7 +48,8 @@ const RecentPost = () => {
                                 image_data={image_hero}
                                 image_alt={image_hero_alt}
                                 title={title}
-                                date={date}
+                                date={moment(date.toString().split('T')[0]).format('LL')}
+                                dateTime={date}
                                 category={category}
                              />
                         ))

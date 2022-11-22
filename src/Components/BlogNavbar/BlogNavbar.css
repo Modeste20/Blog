@@ -45,6 +45,12 @@
     padding:12px 0;
 }
 
+.blog-navbar .categories li a.is-active{
+    color:#b118e9 !important;
+    pointer-events: none;
+    font-weight: 500;
+}
+
 .blog-navbar .categories li a:hover{
     color:#b118e9 !important;
 }

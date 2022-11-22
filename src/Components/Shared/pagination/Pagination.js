@@ -58,13 +58,14 @@ const Pagination = ({
                 className={'pagination-item'}
                 onClick={onPrevious}
             >
-                <Link to='#articles' onClick={
+                <Link to='#' onClick={
                     (e) => {
-                        if(currentPage === 1){
-                            e.preventDefault()
+                        e.preventDefault()
+                        if(currentPage !== 1){
+                            window.scrollTo(0,document.getElementById('articles').offsetTop - 30)
                         }
                     }
-                } className="arrow left">
+                } className={"arrow left "+(currentPage === 1 ? 'disabled' : '')}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </Link>
             </li>
@@ -82,9 +83,10 @@ const Pagination = ({
                         className={' pagination-item '+(pageNumber === currentPage ? ' item-active ' : ' ')}
                         onClick={() => onPageChange(pageNumber)}
                     >
-                        <Link to='#articles' onClick={(e) => {
-                            if(currentPage === pageNumber){
+                        <Link to='#' onClick={(e) => {
                                 e.preventDefault()
+                            if(currentPage !== pageNumber){
+                                window.scrollTo(0,document.getElementById('articles').offsetTop - 30)
                             }
                         }}>
                             {pageNumber}
@@ -97,11 +99,12 @@ const Pagination = ({
                 className={'pagination-item'}
                 onClick={onNext}
             >
-                <Link className="arrow right" to='#articles' onClick={
+                <Link className={"arrow right "+(currentPage === lastPage ? 'disabled' : '')} to='#' onClick={
 
                     (e) => {
-                        if(currentPage === lastPage){
-                            e.preventDefault()
+                        e.preventDefault()
+                        if(currentPage !== lastPage){
+                            window.scrollTo(0,document.getElementById('articles').offsetTop - 30)
                         }
                     }
 

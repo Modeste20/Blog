@@ -24,6 +24,10 @@
     margin-top:5px;
 }
 
+.pagination-container .pagination-item a.disabled{
+    color:#a6aaad !important
+}
+
 .pagination-container .pagination-item .arrow{
     margin-top:8px;
 }

@@ -31,6 +31,10 @@ const location = [
 const Layout = ({ children }) => {
 
     const { pathname } = useLocation()
+
+    // Sur certaine page, le header et la bannière ont une image ou couleur d'arrière-plan
+    //Selon ces pages, cet état permet de changer la couleur du texte du header en ajoutant une classe donnée au header
+
     const [headerClass, setHeaderClass] = useState(false)
 
     useEffect(() => {
@@ -39,14 +43,19 @@ const Layout = ({ children }) => {
         }
     }, [pathname])
 
+    //Etat permettant de ficher le header sur le haut et ce lorsque l'utilisateur scrolle la page
+
     const [fixedHeader, setFixedHeader] = React.useState(false)
 
+    //Etant de chargement de la page
+
     const [loading, setLoading] = useState(true)
+
+    //Lorsque ce composant est monté, la page est prête et loading passe à false
 
 
     useEffect(() => {
         setLoading(false)
-        console.log('location', location)
     }, [])
 
     const data = useStaticQuery(graphql`
@@ -60,6 +69,9 @@ const Layout = ({ children }) => {
     `)
 
     if (typeof window !== "undefined") {
+
+        //Lorsque l'utilisateur scrolle la page, on fixe le header à partir d'une certaine valeur de scrollY
+
         window.addEventListener('scroll', function (e) {
             if (window.scrollY > 72) {
                 setFixedHeader(true)
@@ -76,15 +88,19 @@ const Layout = ({ children }) => {
     }
 
 
-    //active navbar on mobile
+    //active navbar on mobile : état pour afficher la sidebar ou pas sur mobile
 
     const [active, setActive] = useState(false)
+
+    //Pour fermer la sidebar sur mobile, active passe à false
 
     const onClose = () => {
         if (active) {
             setActive(false)
         }
     }
+
+    //Si la sidebar est visible (active === true), on ajoute du style à body
 
     useEffect(() => {
         if (typeof document !== 'undefined') {
@@ -97,6 +113,7 @@ const Layout = ({ children }) => {
 
     }, [active])
 
+    //Si la sidebar est visible et que l'on clique sur le body, elle se ferme
 
     useEffect(() => {
         if (typeof document !== 'undefined') {
@@ -108,6 +125,14 @@ const Layout = ({ children }) => {
         }
     })
 
+    //openSidebar : gestion du clic du menu hamburger sur mobile
+
+    const openSideBar = (e) => { e.stopPropagation(); setActive(true) }
+
+    //Affichage de l'animation lorsque le site se charge
+
+    //Loading
+
     if (loading) {
         return <div className="loading">
             <div>
@@ -117,9 +142,13 @@ const Layout = ({ children }) => {
         </div>
     }
 
+    console.log('render')
+
 
     return (
         <>
+            {/* Header */}
+
             <header className={'header' + (fixedHeader ? ' header-sticky ' : '') + (headerClass ? ' header-white ' : '')} id='header'>
                 <div className='container-md'>
                     <div className="row row-header justify-content-between align-items-center">
@@ -128,7 +157,7 @@ const Layout = ({ children }) => {
                                 Landry
                             </Link>
                         </div>
-                        <div className='col-4 d-sm-none text-end' style={{ textAlign: 'right', height: '100%' }} onClick={(e) => { e.stopPropagation(); setActive(true) }}>
+                        <div className='col-4 d-sm-none text-end' style={{ textAlign: 'right', height: '100%' }} onClick={openSideBar}>
                             <div className="p-1">
                                 <FontAwesomeIcon icon={faHamburger} className='menu-bars py-2' />
                             </div>
@@ -145,9 +174,6 @@ const Layout = ({ children }) => {
                                     <li className="nav-item pb-4 py-sm-0 px-md-3  px-lg-4 px-2">
                                         <Link className="nav-link active" aria-current="page" to='/#biography' onClick={onClose}>A propos de moi</Link>
                                     </li>
-                                    {/*<li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
-                                    <DropDown title={'Nos services'} list={location} />
-                                </li>*/}
                                     <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
                                         <Link className="nav-link active" style={{ display: 'inline-block' }} onClick={onClose} aria-current="page" to='/services'>Mes services</Link>
                                     </li>
@@ -161,12 +187,13 @@ const Layout = ({ children }) => {
                 </div>
             </header>
 
-
+            {/* Contenu principal de la page */}
 
             <main>
                 {children}
             </main>
 
+            {/* Footer */}
 
             <footer className='footer' id='footer'>
                 <div className="container-md">
@@ -180,7 +207,7 @@ const Layout = ({ children }) => {
                                 <ul>
 
                                     <li>
-                                        <Link to='/modeste-djedemin'>A propos de moi</Link>
+                                        <Link to='/#biography'>A propos de moi</Link>
                                     </li>
 
                                     <li>
@@ -201,11 +228,19 @@ const Layout = ({ children }) => {
                             <nav className="nav">
                                 <ul>
                                     <li>
-                                        <Link to='/about'>A propos de moi</Link>
+                                        <Link to='/services'>Création de site web</Link>
                                     </li>
 
                                     <li>
-                                        <Link to='/contactez-nous'>Contactez moi</Link>
+                                        <Link to='/services'>Design ui</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to='/services'>Consultant Seo</Link>
+                                    </li>
+
+                                    <li>
+                                        <Link to='/services'>Maîtrise des logiciels de la suite Microsoft</Link>
                                     </li>
 
                                 </ul>

@@ -9,6 +9,9 @@ import queryString from 'query-string'
 import Pagination from '../../Components/Shared/pagination/Pagination'
 import CardArticle from '../../Components/CardArticle/CardArticle'
 import slugify from 'slugify'
+import moment from 'moment'
+import 'moment/locale/fr'
+
 
 let PageSize = 3;
 
@@ -25,28 +28,30 @@ const Blog = ({ data }) => {
   const [articles, setArticles] = useState(data.allMdx.edges)
   const [datas, setDatas] = useState([])
 
+  const search = queryString.parse(location.search)
+
   console.log('article-length', datas)
 
   const currentTableData = () => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    const search = queryString.parse(location.search)
 
-    setArticles(data.allMdx.edges)
+    const blog_articles = data.allMdx.edges;
 
-    if (articles && Array.isArray(articles)) {
+    if (blog_articles && Array.isArray(blog_articles)) {
       if (search.categorie) {
 
         const sectionElement = document.getElementById('articles')
         if (sectionElement) {
           window.scrollTo(0, sectionElement.offsetTop)
         }
-        const dat = articles.filter(({node}) => getCategory(node.frontmatter.category) === search.categorie);
+        const dat = blog_articles.filter(({node}) => getCategory(node.frontmatter.category) === search.categorie);
         console.log('dat',dat)
-
+        setArticles(dat)
         return dat.slice(firstPageIndex, lastPageIndex)
       } else{
-        return articles.slice(firstPageIndex, lastPageIndex);
+        setArticles(blog_articles)
+        return blog_articles.slice(firstPageIndex, lastPageIndex);
       }
     } else {
       return []
@@ -54,8 +59,9 @@ const Blog = ({ data }) => {
   }
 
   useEffect(() => {
+    console.log('search',search.categorie)
     setDatas(currentTableData)
-  }, [currentPage,location.search])
+  }, [location.search,currentPage])
 
     console.log('d', datas)
 
@@ -69,23 +75,11 @@ const Blog = ({ data }) => {
     }
   }
 
-  /*useEffect(() => {
-    const search = queryString.parse(location.search)
-    setArticles(data.allMdx.edges)
-    if (search.categorie) {
-      setArticles(c => {
-        return c.filter(({node}) => getCategory(node.frontmatter.category) === search.categorie)
-      })
-    }
-    const sectionElement = document.getElementById('articles')
-    if (sectionElement && search.categorie) {
-      window.scrollTo(0, sectionElement.offsetTop)
-    }
-  }, [location.search])
-  */
-
   return (
     <Layout>
+
+      {/* BANNIERE */}
+
       <div className="banner-blog">
         <div className="banner-blog-image">
 
@@ -98,8 +92,10 @@ const Blog = ({ data }) => {
         </div>
       </div>
 
+      {/* ARTICLES */}
+
       <div className='row articles pt-5' id='articles'>
-        <section className="col-12 col-lg-8 list-articles px-2 py-5 ml-5">
+        <section className="col-12 col-lg-8 list-articles px-2 py-5 ml-5 order-1 order-lg-0">
           <div className="all-articles">
             {/*
               datas.length ? datas.map(({ node }) => <ArticleCard className={''} title={node.frontmatter.title} category={node.frontmatter.category} key={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} />) : <h5>Aucun articles</h5>
@@ -115,7 +111,8 @@ const Blog = ({ data }) => {
                   image_data={image_hero}
                   image_alt={image_hero_alt}
                   category={category}
-                  date={date}
+                  date={moment(date.toString().split('T')[0]).format('LL')}
+                  dateTime={date}
                   title={title}
                   description={description}
                   key={title}
@@ -132,8 +129,8 @@ const Blog = ({ data }) => {
             datas={datas}
           />
         </section>
-        <aside className="col-12 col-lg-4 px-0">
-          <BlogNavbar />
+        <aside className="col-12 col-lg-4 order-0 order-lg-1 px-0">
+          <BlogNavbar category={search.categorie} />
         </aside>
 
       </div>
@@ -150,7 +147,7 @@ query{
           title
           category
           description
-          date(formatString: "LL", locale: "fr-FR")
+          date
           image_hero_alt
           image_hero {
             childImageSharp {

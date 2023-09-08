@@ -3,7 +3,7 @@ import * as React from "react"
 import Carousel from "../Components/Carousel"
 import Layout from "../Components/Layout/Layout"
 import data from "../data/testimonials_home_data"
-import Profil from './../images/Landry-avatar.png'
+import Profil from './../images/Landry.png'
 import BiographyImage from './../images/biography-image.jpg'
 
 import './home.css'
@@ -99,12 +99,12 @@ const IndexPage = () => {
           <div className="banner-home">
             <div className="container-md">
               <div className="row">
-                <div className="col-12 col-sm-9 col-md-4 col-lg-6 mb-5 text-center">
-                  <img src={Profil} alt='Image de Landry Modeste' height={300} />
+                <div className="col-12 col-sm-10 mx-auto mx-md-0 col-md-4 col-lg-6 mb-5 text-center">
+                  <img src={Profil} alt='Image de Landry Modeste' />
                 </div>
-                <div className="col-12 col-sm-9 col-md-8 col-lg-6 description">
+                <div className="col-12 col-sm-10 mx-auto mx-md-0 col-md-8 col-lg-6 description">
                   <div className="sub-title">
-                    Plop ! Moi c'est
+                    Salut ! 👋 Moi c'est
                   </div>
                   <div className="title">
                     <h1>
@@ -113,9 +113,10 @@ const IndexPage = () => {
                   </div>
                   <div className="content">
                     <p className="my-3">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad minima inventore facilis laborum qui corrupti veniam eos numquam porro eligendi. Natus nihil unde eum est repellat! Dolores cum a autem!
+                      Développeur web frontend, passionné et autodidacte avec plus de deux ans d’expérience dans l’univers du développement web. <br />
+                      Je m'interresse également au design d'interface utilisateur pour la création d'interfaces plus ergonomiques.
                     </p>
-                    <Link to="#biography" className="btn btn-secondary mt-4 px-4 link-about-modeste">En savoir plus</Link>
+                    <Link to="#biography" className="btn btn-secondary mt-4 px-4 link-about-modeste">En savoir plus sur moi</Link>
                   </div>
                 </div>
               </div>
@@ -125,10 +126,10 @@ const IndexPage = () => {
 
         {/* BIOGRAPHY*/}
 
-        <section id="biography" className="biography py-5 my-5">
+        <section id="biography" className="biography mt-5 mt-md-0">
           <div className="container-md">
-            <div className="row">
-              <div className="col-12 order-1 order-md-0 col-sm-10 col-md-7">
+            <div className="row align-items-center">
+              <div className="col-12 order-1 order-md-0 col-sm-12 col-md-7">
 
                 <div className="landry-biography">
                   <h2 className="section-title">
@@ -148,7 +149,7 @@ const IndexPage = () => {
 
               </div>
 
-              <div className="col-12 order-0 order-md-1 col-sm-10 col-md-5">
+              <div className="col-12 order-0 order-md-1 col-sm-10 col-md-5 mx-auto mx-md-0">
                 <div className="biography-image">
                   <div className="image-container">
                     <img src={BiographyImage} alt='Image de Landry Modeste' height={300} />
@@ -179,7 +180,7 @@ const IndexPage = () => {
 
         {/* SKILLS */}
 
-        <section className="skills my-5 py-5" id="skills">
+        <section className="skills mt-5" id="skills">
           <div className="container-md">
             <h2 className="section-title">
               Mes compétences
@@ -199,7 +200,7 @@ const IndexPage = () => {
 
         {/* PORTFOLIOS */}
 
-        <section className="portfolio mt-5 pt-5" id="portfolio">
+        <section className="portfolio mt-5" id="portfolio">
           <div className="container-md">
             <h2 className="section-title">Projets réalisés</h2>
             <div className="portfolio-options">
@@ -235,7 +236,7 @@ const IndexPage = () => {
         {/* FORMATIONS*/}
 
 
-        <section className="formations" id="formations">
+        <section className="formations mt-5" id="formations">
           <div className="container-md">
             <h2 className="section-title">
               Mes formations

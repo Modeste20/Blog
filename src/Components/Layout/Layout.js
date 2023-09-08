@@ -147,6 +147,9 @@ const Layout = ({ children }) => {
 
     return (
         <>
+
+            <div className="overlay d-sm-none"></div>
+
             {/* Header */}
 
             <header className={'header' + (fixedHeader ? ' header-sticky ' : '') + (headerClass ? ' header-white ' : '')} id='header'>
@@ -168,17 +171,17 @@ const Layout = ({ children }) => {
                             </div>
                             <nav>
                                 <ul className="navbar-nav d-block d-sm-flex flex-row align-items-center header-navbar justify-content-end me-auto mb-2 mb-lg-0">
-                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
+                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg- px-0 px-sm-2">
                                         <Link className="nav-link active" aria-current="page" to='/blog'>Blog</Link>
                                     </li>
-                                    <li className="nav-item pb-4 py-sm-0 px-md-3  px-lg-4 px-2">
+                                    <li className="nav-item pb-4 py-sm-0 px-md-3  px-lg-4 px-0 px-sm-2">
                                         <Link className="nav-link active" aria-current="page" to='/#biography' onClick={onClose}>A propos de moi</Link>
                                     </li>
-                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
+                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-0 px-sm-2">
                                         <Link className="nav-link active" style={{ display: 'inline-block' }} onClick={onClose} aria-current="page" to='/services'>Mes services</Link>
                                     </li>
-                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-2">
-                                        <Link className="nav-link active btn btn-btn px-3 py-2" style={{ display: 'inline-block',color:'red !important' }} onClick={onClose} aria-current="page" to='/contactez-moi'>Contactez-moi</Link>
+                                    <li className="nav-item pb-4 py-sm-0 px-md-3 px-lg-4 px-0 px-sm-2">
+                                        <Link className="nav-link active btn btn-btn px-4 py-3" style={{ display: 'inline-block' }} onClick={onClose} aria-current="page" to='/contactez-moi'>Contactez-moi</Link>
                                     </li>
                                 </ul>
                             </nav>

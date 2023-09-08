@@ -83,8 +83,14 @@ select,option,*::placeholder{
     font-size:1.4rem !important;
 }
 
-body.body-nav-open{
-    background-color: rgba(0,0,0,.3);
+.body-nav-open .overlay{
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
 }
 
 body.body-nav-open a:not(body.body-nav-open header a){
@@ -120,7 +126,7 @@ h2.section-title{
     margin:0;
     padding-top:15px;
     padding-bottom:18px;
-    margin-bottom:40px;
+    margin-bottom:35px;
     font-size:2.5rem !important;
     position:relative;
     color:var(--bs-secondary);

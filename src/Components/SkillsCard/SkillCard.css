@@ -1,13 +1,15 @@
 .article-skill{
     border-radius:20px;
-    padding:30px 15px;
+    /*padding:30px 15px;*/
     /*background:#ad09e921;*/
     border:2px solid transparent;
     transition:.2s;
 }
 
-.article-skill:hover{
-    border-color:#860db3;
+@media only screen and (min-width:768px){
+    .article-skill:hover{
+        border-color:#860db3;
+    }
 }
 
 

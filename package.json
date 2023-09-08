@@ -36,5 +36,11 @@
     "react-dom": "^17.0.1",
     "slugify": "^1.6.5",
     "validator": "^13.7.0"
-  }
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 0.5%",
+    "not dead",
+    "Firefox ESR"
+  ]
 }

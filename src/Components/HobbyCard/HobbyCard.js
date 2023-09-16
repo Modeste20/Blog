@@ -1,6 +1,7 @@
 import basketBall from './../../images/hobby/basketball.png'
 import code from './../../images/hobby/code.png'
 import music from './../../images/hobby/music.png'
+import travel from './../../images/hobby/travel.png'
 
 
 import "./HobbyCard.css"
@@ -40,7 +41,7 @@ export const HOBBIES = [
         icon:music
     },
     {
-        title:'Writing',
-        icon:code
+        title:'Voyage',
+        icon:travel
     }
 ]

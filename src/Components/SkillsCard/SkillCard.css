@@ -6,7 +6,7 @@
     transition:.2s;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:1200px){
     .article-skill:hover{
         border-color:#860db3;
     }
@@ -43,6 +43,10 @@
     padding-left:30px;
     padding-top:10px;
     position:relative;
+}
+
+.article-main > p{
+    margin-bottom: 0;
 }
 
 .article-skill .article-main::before{

@@ -27,7 +27,7 @@ const CardArticle = ({blog, url, image_data, image_alt, category, date, title, d
                 </div>
                 <div className={" article-content "+(blog ? "col-12 col-sm-6 col-md-6 col-lg-7" : "")}>
                     <div className="content-head">
-                        <div className="category-title">
+                        <div className="category-title tag">
                             {getCategory(category)}
                         </div>
                         <div className="date">

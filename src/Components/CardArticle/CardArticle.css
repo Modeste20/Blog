@@ -14,18 +14,6 @@
     font-weight:500;
 }
 
-.card-article .article-content .category-title{
-    padding:5px 8px;
-    border-radius:20px;
-    background-color: #f1dff8bb ;
-    color:#7B0EA2;
-    border:2px solid #570b73;
-    display: inline-block;
-    margin:10px 0;
-    font-size:1.3rem;
-    font-weight:800;
-}
-
 .card-article .article-content .article-title{
     font-size:1.8rem !important;
     padding:5px 0;

@@ -1,15 +1,31 @@
-
-
-@media only screen and (min-width:768px){
-    .projet-card .card:hover{
-        box-shadow: 0px 0px 50px rgba(0,0,0,.1);
-        transform: scale(1.05);
-    }
-    
-    .projet-card .card{
-        transition: .2s;
-    }
+.projet-card .card-footer{
+    padding:0;
+    background-color: transparent;
+    border:none
 }
+
+.projet-card .card-title a{
+    color:inherit;
+}
+
+.projet-card .card-title a:hover{
+    color:#7B0EA2 !important;
+}
+
+.card-skills{
+    gap:6px;
+}
+
+.card-skills > .tag{
+    margin:0;
+    border-radius: 7px;
+    
+    color:#632f76;
+    border:2px solid #b598c0;
+    font-weight:500;
+}
+
+
 
 @media only screen and (min-width:768px) and (max-width:992px){
     .projet-card:nth-child(2n+1){

@@ -188,6 +188,18 @@ a{
     color:#02294d;
 }
 
+.tag{
+    padding:7px 12px;
+    border-radius:20px;
+    background-color: #f1dff8bb ;
+    color:#7B0EA2;
+    border:2px solid #570b73;
+    display: inline-block;
+    margin:10px 0;
+    font-size:1.3rem;
+    font-weight:800;
+}
+
 /*BreadCrumb style*/
 
 nav.breadcrumb ol{

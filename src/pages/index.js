@@ -113,8 +113,8 @@ const IndexPage = () => {
                   </div>
                   <div className="content">
                     <p className="my-3">
-                      Développeur web frontend, passionné et autodidacte avec plus de deux ans d’expérience dans l’univers du développement web. <br />
-                      Je m'interresse également au design d'interface utilisateur pour la création d'interfaces plus ergonomiques.
+                      Developpeur web frontend et designer d'interface utilisateur.<br />
+                      J'ai les compétences nécessaires pour créer de beaux sites web, rapide et facile à utiliser pour les internautes.
                     </p>
                     <Link to="#biography" className="btn btn-secondary mt-4 px-4 link-about-modeste">En savoir plus sur moi</Link>
                   </div>
@@ -137,12 +137,13 @@ const IndexPage = () => {
                   </h2>
                   <div className="biography-content">
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quaerat sunt cupiditate architecto dolore hic ducimus fuga dignissimos eveniet, harum saepe totam nulla laborum ipsum aliquam perspiciatis cumque numquam blanditiis!
+                      Je suis développeur web, passionné et autodidacte avec plus de deux ans d’expérience dans l’univers du développement web. 
+                      C'est pendant la période de confinement dûe à la crise du covid19 en 2021 que je me suis renseigné et commencé l'appentissage de la programmation web.
+                      Depuis, j'ai travaillé sur de nombreux projets personnels en vue d'approfondir mes connaissances dans le secteur et donc de grandir en tant que développeur web.
                     </p>
-
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum laudantium consectetur cupiditate sapiente, dicta veritatis dolores necessitatibus ratione iure sint sit ea unde. Ipsa maiores pariatur delectus sint debitis cumque.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam rerum provident dignissimos impedit necessitatibus autem praesentium, deserunt quo, iure suscipit reprehenderit explicabo amet rem natus culpa, illo laborum omnis vitae.
+                    <p>Par ailleurs, la volonté de créer des expériences en ligne qui vont au-delà de la simple fonctionnalité, faciles et conviviales pour les internautes m'a amené à m'interresser au design UI.
+                      Je continue d'apprendre, de me perfectionner, tout en étant à l'affût des dernières tendances et avancées technologiques 
+                      dans le domaine du développement web et du design d'interface utilisateur.
                     </p>
                   </div>
                 </div>
@@ -187,7 +188,7 @@ const IndexPage = () => {
             </h2>
 
             <div className="all-skills">
-              <div className="row justify-content-between">
+              <div className="row justify-content-between  gy-5 gy-xl-4 py-3 py-xl-0">
 
                 {
                   SKILLS.map(({className,title,icon,children}) => <SkillCard key={className} children={children} icon={icon} title={title} className={'skill '+className} />)

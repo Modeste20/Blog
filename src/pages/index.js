@@ -8,8 +8,6 @@ import BiographyImage from './../images/biography-image.jpg'
 
 import './home.css'
 import SkillCard, { SKILLS } from "../Components/SkillsCard/SkillCard"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCentercode, faHtml5 } from "@fortawesome/free-brands-svg-icons"
 import { HOBBIES, HobbyCard } from "../Components/HobbyCard/HobbyCard"
 import PROJECTS from "../data/portfolios_home_data"
 import ProjetCard from "../Components/ProjetCard/ProjetCard"
@@ -210,9 +208,6 @@ const IndexPage = () => {
               </button>
               <button className="options-button" onClick={(e) => filterProjects(e, 'dev')}>
                 <abbr title="developpement web">Dev web</abbr>
-              </button>
-              <button className="options-button" onClick={(e) => filterProjects(e, 'seo')}>
-                <abbr title="Référencement naturel">SEO</abbr>
               </button>
               <button className="options-button" onClick={(e) => filterProjects(e, 'ui')}>
                 <abbr title="Référencement naturel">Design</abbr>

@@ -1,8 +1,12 @@
 import React from 'react'
-import Image from './../images/projet.jpg'
 import Blog from './../images/projects/blog.jpg'
 import Gym from './../images/projects/gym.jpg'
 import LanMeal from './../images/projects/lanmeal.jpg'
+import LandryPiko from './../images/projects/landry-piko.jpg'
+import Challenges from './../images/projects/challenges.jpg'
+import UIProject1 from './../images/projects/ui.jpg'
+
+
 
 
 
@@ -28,7 +32,7 @@ const PROJECTS = [
         url:'https://djedeminmodeste.vercel.app/'
     },
     {
-        category:'seo',
+        category:'dev',
         image_alt:'GYM',
         image:Gym,
         title:'Site web pour une salle de gym',
@@ -68,15 +72,15 @@ const PROJECTS = [
     {
         category:'dev',
         image_alt:'Challenges',
-        image:Image,
+        image:Challenges,
         title:'Les challenges',
         date:{
             begin:{
                 datetime:'2021',
-                time:'2020'
+                time:'2021'
             },
             finish:{
-                datetime:'',
+                datetime:new Date().getFullYear(),
                 time:'Now'
             }
         },
@@ -87,40 +91,40 @@ const PROJECTS = [
     {
         category:'dev',
         image_alt:'Projet 1',
-        image:Image,
-        title:"une notion complexe pratiquée ",
+        image:LandryPiko,
+        title:"Landry Piko ",
         date:{
             begin:{
-                datetime:'2021-04',
-                time:'Avril 2021'
+                datetime:'2022-05',
+                time:'Mai 2022'
             },
             finish:{
-                datetime:'2021-05',
-                time:'Juin 2021'
+                datetime:'',
+                time:''
             }
         },
-        description:'Du texte réservé pour la description',
-        skills:['HTML','CSS','Javascript'],
-        url:''
+        description:"Il s'agit d'un template de site One Page d'une entreprise de marketing, aidant les clients à promouvoir leur activité sur le web. Ce template est codé sur mesure utilisant HTML, CSS avec un peu de javascript.",
+        skills:['HTML','CSS'],
+        url:'https://landry-piko.vercel.app/'
     },
     {
-        category:'dev',
-        image_alt:'Projet 1',
-        image:Image,
-        title:'UX/Ui Design Projects',
+        category:'ui',
+        image_alt:'UX/UI Projects',
+        image:UIProject1,
+        title:'UX/UI Design Projects',
         date:{
             begin:{
-                datetime:'2021-04',
-                time:'Avril 2021'
+                datetime:'2023-06',
+                time:'Juin 2023'
             },
             finish:{
-                datetime:'2021-05',
-                time:'Juin 2021'
+                datetime:'2023-08',
+                time:'Août 2023'
             }
         },
-        description:'Du texte réservé pour la description',
-        skills:['HTML','CSS','Javascript'],
-        url:''
+        description:"Un ensemble de projets figma. Ces projets vont de mes premiers wireframes créés au design d' interface d'application mobile  en passant par la reproduction de design. ",
+        skills:['Figma','Wireframe','UI principes'],
+        url:'https://www.figma.com/file/ugnZiBILKiKwdE4Yck3L29/Projects?type=design&node-id=1%3A165&mode=design&t=uz1W4L9HyxdSBNJA-1'
     }
 ]
 

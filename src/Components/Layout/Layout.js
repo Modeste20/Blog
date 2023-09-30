@@ -28,7 +28,7 @@ const location = [
 
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footer=true }) => {
 
     const { pathname } = useLocation()
 
@@ -37,15 +37,20 @@ const Layout = ({ children }) => {
 
     const [headerClass, setHeaderClass] = useState(false)
 
+        //Etat permettant de ficher le header sur le haut et ce lorsque l'utilisateur scrolle la page
+
+        const [fixedHeader, setFixedHeader] = React.useState(false)
+
     useEffect(() => {
-        if (['/', '/blog', '/blog/', '/blog#articles'].includes(pathname)) {
+        if (!fixedHeader && ['/blog', '/blog/', '/blog#articles'].includes(pathname)) {
             setHeaderClass(true)
         }
-    }, [pathname])
+        if(fixedHeader){
+            setHeaderClass(false)
+        }
+    }, [pathname,fixedHeader])
 
-    //Etat permettant de ficher le header sur le haut et ce lorsque l'utilisateur scrolle la page
 
-    const [fixedHeader, setFixedHeader] = React.useState(false)
 
     //Etant de chargement de la page
 
@@ -76,7 +81,8 @@ const Layout = ({ children }) => {
             if (window.scrollY > 72) {
                 setFixedHeader(true)
             } else {
-                setFixedHeader(false)
+                setFixedHeader(false);
+                setHeaderClass(true)
             }
         })
 
@@ -156,7 +162,7 @@ const Layout = ({ children }) => {
                 <div className='container-md'>
                     <div className="row row-header justify-content-between align-items-center">
                         <div className="col-4 col-sm-3">
-                            <Link to='/' className='h3'>
+                            <Link to='/' className='h3 lg'>
                                 Landry
                             </Link>
                         </div>
@@ -198,9 +204,9 @@ const Layout = ({ children }) => {
 
             {/* Footer */}
 
-            <footer className='footer' id='footer'>
+            {footer && <footer className='footer' id='footer'>
                 <div className="container-md">
-                    <div className='row'>
+                    <div className='row align-items-start'>
                         <div className='col-12 mx-auto col-sm-6 col-md-6 col-lg-3 pb-3 footer-div footer-links'>
                             
                             <h5>Liens</h5>
@@ -214,7 +220,7 @@ const Layout = ({ children }) => {
                                     </li>
 
                                     <li>
-                                        <Link to='/contactez-nous'>Contactez moi</Link>
+                                        <Link to='/contactez-moi'>Contactez moi</Link>
                                     </li>
 
                                     <li>
@@ -229,21 +235,18 @@ const Layout = ({ children }) => {
                         <div className='col-12 col-sm-6 col-md-6 col-lg-3 pb-3 footer-div footer-links'>
                             <h5>Mes services</h5>
                             <nav className="nav">
-                                <ul>
+                                <ul className=''>
+
                                     <li>
-                                        <Link to='/services'>Création de site web</Link>
+                                        <Link to='/services'>Conception de site web</Link>
                                     </li>
 
                                     <li>
-                                        <Link to='/services'>Design ui</Link>
+                                        <Link to='/services'>Création de site web sur mesure</Link>
                                     </li>
 
                                     <li>
-                                        <Link to='/services'>Consultant Seo</Link>
-                                    </li>
-
-                                    <li>
-                                        <Link to='/services'>Maîtrise des logiciels de la suite Microsoft</Link>
+                                        <Link to='/services'>Correction de bugs et refonte de site web </Link>
                                     </li>
 
                                 </ul>
@@ -252,21 +255,20 @@ const Layout = ({ children }) => {
 
                         <div className='col-12 col-sm-6 col-md-6 col-lg-3 footer-follow footer-div'>
                             <h5>Suivez-moi</h5>
-                            <div className="network-links d-flex justify-content-start mt-4">
-                                <FooterSocialLink href={''} className='link-twitter' icon={faTwitter} />
+                            <div className="network-links d-flex justify-content-start">
 
-                                <FooterSocialLink href={''} className='link-github' icon={faGithub} />
+                                <FooterSocialLink href={'https://twitter.com/Landry_Dev'} className='link-twitter' icon={faTwitter} />
 
-                                <FooterSocialLink href={''} className='link-dribbble' icon={faDribbble} />
+                                <FooterSocialLink href={'https://github.com/Modeste20'} className='link-github' icon={faGithub} />
 
-                                <FooterSocialLink href={''} className='link-instagram' icon={faInstagram} />
+                                <FooterSocialLink href={'https://dribbble.com/Djedemin'} className='link-dribbble' icon={faDribbble} />
 
                             </div>
                         </div>
 
                         <div className='col-12 col-sm-6 col-md-6 col-lg-3 footer-newsletter footer-div'>
                             <h5>Abonnez-vous à la newsletters</h5>
-                            <p>Veuillez entrer votre email pour recevoir des notifications en temps réel lorsqu'il y a des news sur mon blog</p>
+                            <p>Veuillez entrer votre email pour recevoir des notifications en temps réel lorsqu'il y a des news sur mon blog (indisponible pour le moment)</p>
                             <div className="input-newsletter">
                                 <input type="email" className="form-control" id="input-news" placeholder="Entrez votre email" />
                                 <button className='btn btn-news btn-btn'>
@@ -275,9 +277,9 @@ const Layout = ({ children }) => {
                             </div>
                         </div>
                     </div>
-                    <p className='py-5 copyright my-0'><small>Copyright ModesteDJ <time dateTime='2022'>2022</time> | Tous droits réservés</small></p>
+                    <p className='py-5 copyright my-0'><small>&copy; Copyright Modeste <time dateTime='2022'>2022</time></small></p>
                 </div>
-            </footer>
+            </footer>}
         </>
     )
 }

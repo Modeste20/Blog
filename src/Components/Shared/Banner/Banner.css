@@ -1,4 +1,7 @@
 .banner{
-    height:45vh;
-    margin-top: 87px;
+    height:300px;
+}
+
+.banner-services{
+    height:370px;
 }

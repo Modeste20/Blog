@@ -62,6 +62,10 @@
     flex-direction: column;
 }
 
+.contact-landry .section-contact .form-row .info-contact .info a{
+    text-decoration: underline !important;
+}
+
 .contact-landry .section-contact .form-row .info-contact .info a:hover{
     color:#b118e9 !important;
 }

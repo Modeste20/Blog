@@ -212,8 +212,9 @@ const Contact = () => {
                     <div className="row justify-content-between">
                         <div className="text">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptate? Ducimus autem corporis iste qui possimus, consequatur eaque voluptatibus alias ipsum et nisi rerum unde perferendis, recusandae aut! Aspernatur, esse!
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam deserunt maiores consequuntur veniam. Sed beatae in, a magni, corporis tenetur quibusdam soluta ratione commodi nihil alias aut saepe nobis sunt?
+                                Que vous soyez designer d'interface utilisateur ou développeur web souhaitant qu'on travaille ensemble sur un projet ou un particulier,
+                                une structure, un startup interressé par les différentes services que je propose, entrez en contact avec moi à l'aide des informations ci-dessous.
+                                Mon inbox est toujours ouvert et considérez-moi pour de futurs emplois et opportunités.
                             </p>
                         </div>
 
@@ -226,7 +227,7 @@ const Contact = () => {
                                             <FontAwesomeIcon icon={faMapMarker} />
                                         </div>
                                         <div className="info-content">
-                                            France , Paris
+                                            Alger , Algérie
                                         </div>
                                     </div>
 
@@ -236,7 +237,7 @@ const Contact = () => {
                                         </div>
                                         <div className="info-content">
                                             <a href="mailto:jojomodeste52@gmail.com">
-                                                Jojomodeste52@gmail.com
+                                                djedeminmodeste@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -246,7 +247,7 @@ const Contact = () => {
                                             <FontAwesomeIcon icon={faPhone} />
                                         </div>
                                         <div className="info-content">
-                                            +213 791107290
+                                            +213 795487933
                                         </div>
                                     </div>
                                 </div>

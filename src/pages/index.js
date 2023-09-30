@@ -135,11 +135,11 @@ const IndexPage = () => {
                   </h2>
                   <div className="biography-content">
                     <p>
-                      Je suis développeur web, passionné et autodidacte avec plus de deux ans d’expérience dans l’univers du développement web. 
-                      C'est pendant la période de confinement dûe à la crise du covid19 en 2021 que je me suis renseigné et commencé l'appentissage de la programmation web.
-                      Depuis, j'ai travaillé sur de nombreux projets personnels en vue d'approfondir mes connaissances dans le secteur et donc de grandir en tant que développeur web.
+                      Je suis développeur web, passionné et autodidacte possédant une solide expérience dans l’univers du développement web et ce ayant travaillé sur différents projets liés à ce domaine. 
+                      C'est pendant le dernier trimestre de l'année 2021, que je me suis renseigné et commencé l'appentissage de la programmation web.
+                      Depuis, j'ai appris les bases du développement web, travaillé sur de nombreux projets personnels en vue d'approfondir mes connaissances dans le secteur et donc de grandir en tant que développeur web.
                     </p>
-                    <p>Par ailleurs, la volonté de créer des expériences en ligne qui vont au-delà de la simple fonctionnalité, faciles et conviviales pour les internautes m'a amené à m'interresser au design UI.
+                    <p>Par ailleurs, la volonté de créer des expériences en ligne qui vont au-delà de la simple fonctionnalité, conviviales et faciles à utiliser par les internautes m'a amené à m'interresser au design UI.
                       Je continue d'apprendre, de me perfectionner, tout en étant à l'affût des dernières tendances et avancées technologiques 
                       dans le domaine du développement web et du design d'interface utilisateur.
                     </p>
@@ -235,7 +235,7 @@ const IndexPage = () => {
         <section className="formations mt-5" id="formations">
           <div className="container-md">
             <h2 className="section-title">
-              Mes formations
+              Mon parcours et mes certifications
             </h2>
             <FormationTimeline />
           </div>
@@ -243,12 +243,12 @@ const IndexPage = () => {
 
         {/* TEMOIGNAGES */}
 
-        <section className='temoignages pb-5' id='temoignages'>
+        {/*<section className='temoignages pb-5' id='temoignages'>
           <div className="container-md ">
             <h2>Les témoignages</h2>
             <Carousel data={carousel_data ? carousel_data : data} />
           </div>
-        </section>
+                </section>*/}
 
         {/* ARTICLES POPULAIRES */}
 

@@ -1,0 +1,22 @@
+.nfound > .container-md{
+    height:250px;
+}
+
+@media only screen and (min-width:500px){
+    .nfound > .container-md{
+        height:calc(100vh - 150px);
+    }
+}
+
+.nfound-row,
+.nfound > .container-md{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.nfound-status{
+    font-size:2.5rem;
+    font-weight:900;
+    border-right:3px solid #7a0ea293;
+}

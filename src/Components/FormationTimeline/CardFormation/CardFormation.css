@@ -5,6 +5,12 @@
     width:100%;
 }
 
+@media screen and (min-width:992px) {
+    .timeline-block{
+        padding-left: 0;
+    }
+}
+
 .timeline-block:last-child{
     margin-bottom: 0;
 }
@@ -19,17 +25,23 @@
     left:0;
 }
 .timeline-block .timeline-content h3{
-    font-size:1.9rem !important;
+    font-size:1.6rem !important;
     font-weight:800;
 }
 
 .timeline-block .timeline-content h4{
-    font-size:1.7rem !important;
+    font-size:2rem !important;
     font-weight:900 !important
 }
 
 .timeline-block .timeline-content p{
     margin:10px 0;
+}
+
+.timeline-content a{
+    color:#7B0EA2 !important;
+    text-decoration: underline !important;
+    font-weight: 600;
 }
 
 @media all and (min-width:992px){

@@ -8,13 +8,15 @@ const SkillCard = ({title,icon,children}) => {
   return (
     <article className={"col-12 mx-0 p-0 mx-auto mx-md-0  col-sm-6 col-md-6 col-lg-4"}>
         <div className="article-skill px-xl-3 py-xl-4 mx-sm-3">
-        <div className="article-header pb-1">
+        <div className="article-header pb-1 ">
+                {/*
+
             <div className="skill-icon">
-                {
                     icon
-                }
             </div>
-            <div className="skill-title">
+                */}
+
+            <div className="skill-title ms-5">
                 <h3>{title}</h3>
             </div>
         </div>

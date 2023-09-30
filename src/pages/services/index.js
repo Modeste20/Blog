@@ -4,6 +4,8 @@ import React from "react"
 import Layout from "../../Components/Layout/Layout"
 import ServiceCard from "../../Components/ServiceCard/ServiceCard"
 import Banner from "../../Components/Shared/Banner/Banner"
+import './services.css'
+
 
 const Services = () => {
     return (
@@ -11,18 +13,18 @@ const Services = () => {
             <div className="landry-services">
                 <Banner title={'Services'} className='banner-services' />
                 <div className="container-md services">
-                    <div className="row justify-content-center mb-5 pb-5">
-                        <ServiceCard icon={faHtml5} title={'Title1'} link='/' className={"card-web"}>
+                    <div className="row mb-5 pb-5 services-row">
+                        <ServiceCard icon={faHtml5} title={'Conception de site web'} link='/' className={"card-web"}>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis provident dolorum vero autem reprehenderit nemo magnam. At esse ex voluptates expedita veritatis facere, repellat pariatur dolores laudantium, eos excepturi sint!
                             </p>
                         </ServiceCard>
-                        <ServiceCard icon={faCss3} title={'Title1'} link='/' className={"card-web"}>
+                        <ServiceCard icon={faCss3} title={'Création de site web sur mesure'} link='/' className={"card-web"}>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis provident dolorum vero autem reprehenderit nemo magnam. At esse ex voluptates expedita veritatis facere, repellat pariatur dolores laudantium, eos excepturi sint!
                             </p>
                         </ServiceCard>
-                        <ServiceCard icon={faArrowUp} title={'Title1'} link='/' className={"card-web"}>
+                        <ServiceCard icon={faArrowUp} title={'Correction de bugs et refonte de site web'} link='/' className={"card-web"}>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis provident dolorum vero autem reprehenderit nemo magnam. At esse ex voluptates expedita veritatis facere, repellat pariatur dolores laudantium, eos excepturi sint!
                             </p>

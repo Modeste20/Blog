@@ -11,6 +11,7 @@ import CardArticle from '../../Components/CardArticle/CardArticle'
 import slugify from 'slugify'
 import moment from 'moment'
 import 'moment/locale/fr'
+import Banner from '../../Components/Shared/Banner/Banner'
 
 
 let PageSize = 3;
@@ -80,16 +81,17 @@ const Blog = ({ data }) => {
 
       {/* BANNIERE */}
 
-      <div className="banner-blog">
+      <div className="banner banner-blog">
         <div className="banner-blog-image">
 
         </div>
+
         <div className="container-md banner-content h-100 d-flex justify-content-center align-items-center">
           <div>
             <h1 style={{ zIndex: '2 !important', color: '#fdfbfdc2' }}>Blog</h1>
             <BreadCrumb />
           </div>
-        </div>
+  </div>
       </div>
 
       {/* ARTICLES */}

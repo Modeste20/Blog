@@ -1,5 +1,6 @@
 .landry-services .services .service-card .card{
     position: relative;
+    border-radius: 20px;
 }
 
 .landry-services .services .service-card .card .head-icn{
@@ -23,8 +24,7 @@
 }
 
 .landry-services .services .service-card .card .card-title{
-    font-size:20px !important;
-    font-weight:600 !important;
+    font-size: 1.9rem !important;
 }
 
 .landry-services .services .service-card .card .card-title a{

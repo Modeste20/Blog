@@ -82,7 +82,6 @@ const Layout = ({ children, footer=true }) => {
                 setFixedHeader(true)
             } else {
                 setFixedHeader(false);
-                setHeaderClass(true)
             }
         })
 

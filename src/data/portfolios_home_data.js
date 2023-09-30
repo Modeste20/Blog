@@ -67,7 +67,7 @@ const PROJECTS = [
         },
         description:"Site web d'un restaurant basé à Alger et à Paris. Il est possible de contacter l'entreprise depuis le site web. Menus proposés et galerie d'images des plats du restaurant se trouvent sur la plateforme officielle de LanMeal",
         skills:['HTML','CSS','Javascript'],
-        url:''
+        url:'https://lanmeal.vercel.app/'
     },
     {
         category:'dev',
@@ -86,7 +86,7 @@ const PROJECTS = [
         },
         description:"Sur ce site web, j'ai rassemblé tous les challenges que j'ai relevé depuis que j'ai commencé la programmation web. Ces challenges m'ont permis d'approfondir des notions spécifiques lors de mon apprentissage. Ce sont aussi des défis sur des sites dédiés ou posés par les collègues de tech de Twitter",
         skills:['HTML','CSS','Javascript'],
-        url:''
+        url:'https://my-challenges.vercel.app/'
     },
     {
         category:'dev',

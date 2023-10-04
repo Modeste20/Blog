@@ -12,24 +12,25 @@ import UIProject1 from './../images/projects/ui.jpg'
 
 
 const PROJECTS = [
+    
     {
-        category:'dev',
-        image_alt:'Mon portfolio',
-        image:Blog,
-        title:'Mon portfolio ',
+        category:'ui',
+        image_alt:'UX/UI Projects',
+        image:UIProject1,
+        title:'UX/UI Design Projects',
         date:{
             begin:{
-                datetime:'2022-06',
-                time:'Juin 2022'
+                datetime:'2023-06',
+                time:'Juin 2023'
             },
             finish:{
-                datetime:'2022-08',
-                time:'Août 2022'
+                datetime:'2023-08',
+                time:'Août 2023'
             }
         },
-        description:"Ce projet est le présent site web. Il s'agit de mon portfolio qui rassemble à la fois mes compétences,mon parcours, mes certifications, un blog et surtout les projets dont je suis le plus fier ",
-        skills:['Bootstrap','Réact','Gatsby'],
-        url:'https://djedeminmodeste.vercel.app/'
+        description:"Un ensemble de projets figma. Ces projets vont de mes premiers wireframes créés au design d'interface d'une application mobile de coworking  en passant par la reproduction de design. ",
+        skills:['Figma','Wireframe','UI principes'],
+        url:'https://www.figma.com/file/ugnZiBILKiKwdE4Yck3L29/Projects?type=design&node-id=1%3A165&mode=design&t=uz1W4L9HyxdSBNJA-1'
     },
     {
         category:'dev',
@@ -38,17 +39,36 @@ const PROJECTS = [
         title:'Site web pour une salle de gym',
         date:{
             begin:{
-                datetime:'2022-05',
-                time:'Mai 2022'
+                datetime:'2023-02',
+                time:'Février 2023'
             },
             finish:{
-                datetime:'2022-07',
-                time:'Juillet 2022'
+                datetime:'2023-04',
+                time:'Avril 2023'
             }
         },
-        description:"Le site web pour l'entreprise de sport GYM, codé sur mesure en utilisant HTML, CSS et Javascript ",
+        description:"Le site web pour l'entreprise de fitness GYM, codé sur mesure en utilisant HTML, CSS et Javascript ",
         skills:['HTML','CSS','Javascript'],
         url:'https://gym-modeste20.vercel.app/'
+    },
+    {
+        category:'dev',
+        image_alt:'Mon portfolio',
+        image:Blog,
+        title:'Mon portfolio ',
+        date:{
+            begin:{
+                datetime:'2022-09',
+                time:'Septembre 2022'
+            },
+            finish:{
+                datetime:'2022-11',
+                time:'Novembre 2022'
+            }
+        },
+        description:"Ce projet est le présent site web. Il s'agit de mon portfolio qui rassemble à la fois mes compétences,mon parcours, mes certifications, un blog et surtout les projets dont je suis le plus fier.",
+        skills:['Bootstrap','Réact','Gatsby'],
+        url:'https://djedeminmodeste.vercel.app/'
     },
     {
         category:'dev',
@@ -57,17 +77,37 @@ const PROJECTS = [
         title:'LanMeal : Restaurant basé à Alger et à Paris',
         date:{
             begin:{
-                datetime:'2022-08',
-                time:'Août 2022'
+                datetime:'2022-07',
+                time:'Juillet 2022'
             },
             finish:{
-                datetime:'2022-09',
-                time:'Septembre 2022'
+                datetime:'',
+                time:''
             }
         },
         description:"Site web d'un restaurant basé à Alger et à Paris. Il est possible de contacter l'entreprise depuis le site web. Menus proposés et galerie d'images des plats du restaurant se trouvent sur la plateforme officielle de LanMeal",
         skills:['HTML','CSS','Javascript'],
         url:'https://lanmeal.vercel.app/'
+    },
+    
+    {
+        category:'dev',
+        image_alt:'Landry Piko',
+        image:LandryPiko,
+        title:"Landry Piko ",
+        date:{
+            begin:{
+                datetime:'2022-05',
+                time:'Mai 2022'
+            },
+            finish:{
+                datetime:'',
+                time:''
+            }
+        },
+        description:"Il s'agit d'un template de site One Page d'une entreprise de marketing, aidant les clients à promouvoir leur activité sur le web. Ce template est codé sur mesure utilisant HTML, CSS et un peu de javascript.",
+        skills:['HTML','CSS'],
+        url:'https://landry-piko.vercel.app/'
     },
     {
         category:'dev',
@@ -84,47 +124,9 @@ const PROJECTS = [
                 time:'Now'
             }
         },
-        description:"Sur ce site web, j'ai rassemblé tous les challenges que j'ai relevé depuis que j'ai commencé la programmation web. Ces challenges m'ont permis d'approfondir des notions spécifiques lors de mon apprentissage. Ce sont aussi des défis sur des sites dédiés ou posés par les collègues de tech de Twitter",
+        description:"Sur ce site web, j'ai rassemblé tous les challenges que j'ai relevé depuis que j'ai commencé la programmation web. Ces challenges m'ont permis de pratiquer et d'approfondir des notions spécifiques abordées lors de mon apprentissage. Ce sont aussi des défis sur des sites dédiés comme Frontend Mentor",
         skills:['HTML','CSS','Javascript'],
         url:'https://my-challenges.vercel.app/'
-    },
-    {
-        category:'dev',
-        image_alt:'Projet 1',
-        image:LandryPiko,
-        title:"Landry Piko ",
-        date:{
-            begin:{
-                datetime:'2022-05',
-                time:'Mai 2022'
-            },
-            finish:{
-                datetime:'',
-                time:''
-            }
-        },
-        description:"Il s'agit d'un template de site One Page d'une entreprise de marketing, aidant les clients à promouvoir leur activité sur le web. Ce template est codé sur mesure utilisant HTML, CSS avec un peu de javascript.",
-        skills:['HTML','CSS'],
-        url:'https://landry-piko.vercel.app/'
-    },
-    {
-        category:'ui',
-        image_alt:'UX/UI Projects',
-        image:UIProject1,
-        title:'UX/UI Design Projects',
-        date:{
-            begin:{
-                datetime:'2023-06',
-                time:'Juin 2023'
-            },
-            finish:{
-                datetime:'2023-08',
-                time:'Août 2023'
-            }
-        },
-        description:"Un ensemble de projets figma. Ces projets vont de mes premiers wireframes créés au design d' interface d'application mobile  en passant par la reproduction de design. ",
-        skills:['Figma','Wireframe','UI principes'],
-        url:'https://www.figma.com/file/ugnZiBILKiKwdE4Yck3L29/Projects?type=design&node-id=1%3A165&mode=design&t=uz1W4L9HyxdSBNJA-1'
     }
 ]
 

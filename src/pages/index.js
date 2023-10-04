@@ -14,6 +14,8 @@ import ProjetCard from "../Components/ProjetCard/ProjetCard"
 import { useState } from "react"
 import FormationTimeline from "../Components/FormationTimeline/FormationTimeline"
 import BlogEntries from "../Components/BlogEntries/BlogEntries"
+import { useLocation } from '@reach/router'
+import { useEffect } from 'react'
 
 // markup
 const IndexPage = () => {
@@ -87,6 +89,19 @@ const IndexPage = () => {
 
   console.log('project', projectsData)
 
+  //Automatic scroll for anchor link
+
+  const {hash} = useLocation()
+
+    useEffect(() => {
+      if(hash && hash==='#biography'){
+          const element = document.querySelector('#biography');
+          if(element){
+              window.scrollTo(0,element.offsetTop - 150)
+          }
+      }
+  })
+
   return (
     <Layout>
       <div className="landry-portfolio-home">
@@ -124,7 +139,7 @@ const IndexPage = () => {
 
         {/* BIOGRAPHY*/}
 
-        <section id="biography" className="biography mt-5 mt-md-0">
+        <section  className="biography mt-5 mt-md-0"  id="biography">
           <div className="container-md">
             <div className="row align-items-center">
               <div className="col-12 order-1 order-md-0 col-sm-12 col-md-7">
@@ -135,13 +150,15 @@ const IndexPage = () => {
                   </h2>
                   <div className="biography-content">
                     <p>
-                      Je suis développeur web, passionné et autodidacte possédant une solide expérience dans l’univers du développement web et ce ayant travaillé sur différents projets liés à ce domaine. 
+                      Je suis développeur web, passionné et autodidacte avec plus de deux ans d'expérience dans l’univers du développement web.
                       C'est pendant le dernier trimestre de l'année 2021, que je me suis renseigné et commencé l'appentissage de la programmation web.
-                      Depuis, j'ai appris les bases du développement web, travaillé sur de nombreux projets personnels en vue d'approfondir mes connaissances dans le secteur et donc de grandir en tant que développeur web.
+                      Depuis, j'ai acquis les compétences indispensables à la création de site web, travaillé sur de nombreux projets personnels en vue 
+                      d'approfondir mes connaissances et donc de grandir en tant que développeur web.
                     </p>
-                    <p>Par ailleurs, la volonté de créer des expériences en ligne qui vont au-delà de la simple fonctionnalité, conviviales et faciles à utiliser par les internautes m'a amené à m'interresser au design UI.
+                    <p>Par ailleurs, la volonté de créer des interfaces {/* expériences en ligne*/} conviviales centrées sur l'utilisateur, utiles et faciles 
+                    à utiliser par les utilisateurs m'a amené à m'interresser au design d'interface utilisateur (UI).
                       Je continue d'apprendre, de me perfectionner, tout en étant à l'affût des dernières tendances et avancées technologiques 
-                      dans le domaine du développement web et du design d'interface utilisateur.
+                      dans les domaines du développement web et du design d'interface utilisateur.
                     </p>
                   </div>
                 </div>

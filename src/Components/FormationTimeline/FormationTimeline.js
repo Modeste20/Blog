@@ -24,7 +24,7 @@ const FORMATIONS = [
         Après avoir acquis mes premières bases en développement web, j'ai commencé à créer mes premières pages et sites web me permettant de pratiquer les connaissances acquises.
       </p>
       <p>
-        Ensuite, les nombreuses ressources gratuites en ligne tels que <strong>FreeCodeCamp</strong>, la plateforme <strong>Mozilla Developer Network (MDN)</strong>, <strong>W3Schools</strong> et bien d'autres, m'ont permis d'aborder et de me renseigner sur différentes notions et technologies utiles en développement web.
+        Les nombreuses ressources gratuites en ligne tels que <strong>FreeCodeCamp</strong>, la plateforme <strong>Mozilla Developer Network (MDN)</strong>, <strong>W3Schools</strong> et bien d'autres, m'ont permis d'aborder et de me renseigner sur différentes notions et technologies utiles en développement web.
         Ces ressources m'ont également servis de guide, parfois de point de départ dans mon apprentissage.
       </p>
       </>
@@ -36,7 +36,7 @@ const FORMATIONS = [
     children:(
       <p>
         Après l'apprentissage des technologies de base du web, je me suis interressé aux outils frontend. Ces outils permettent de simplifier et d'accélérer le développement d'applications web. Ces outils vont 
-        des préprocesseurs comme postCSS et Sass aux frameworks frontend tels que Bootstrap et Réact passant par les packages manager et les bundlers.
+        des préprocesseurs comme postCSS et Sass aux frameworks frontend tels que Bootstrap et Réact passant par les gestionnaires de packages et les bundlers.
       </p>
     )
   },

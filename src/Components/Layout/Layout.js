@@ -28,7 +28,7 @@ const location = [
 
 
 
-const Layout = ({ children, footer=true }) => {
+const Layout = ({ children, footer = true }) => {
 
     const { pathname } = useLocation()
 
@@ -37,18 +37,20 @@ const Layout = ({ children, footer=true }) => {
 
     const [headerClass, setHeaderClass] = useState(false)
 
-        //Etat permettant de ficher le header sur le haut et ce lorsque l'utilisateur scrolle la page
+    //Etat permettant de ficher le header sur le haut et ce lorsque l'utilisateur scrolle la page
 
-        const [fixedHeader, setFixedHeader] = React.useState(false)
+    const [fixedHeader, setFixedHeader] = React.useState(false)
 
     useEffect(() => {
         if (!fixedHeader && ['/blog', '/blog/', '/blog#articles'].includes(pathname)) {
             setHeaderClass(true)
         }
-        if(fixedHeader){
+        if (fixedHeader) {
             setHeaderClass(false)
         }
-    }, [pathname,fixedHeader])
+    }, [pathname, fixedHeader])
+
+        
 
 
 
@@ -207,7 +209,7 @@ const Layout = ({ children, footer=true }) => {
                 <div className="container-md">
                     <div className='row align-items-start'>
                         <div className='col-12 mx-auto col-sm-6 col-md-6 col-lg-3 pb-3 footer-div footer-links'>
-                            
+
                             <h5>Liens</h5>
 
                             <nav className="nav">
@@ -215,7 +217,9 @@ const Layout = ({ children, footer=true }) => {
                                 <ul>
 
                                     <li>
-                                        <Link to='/#biography'>A propos de moi</Link>
+                                        <Link to="/#biography">
+                                            A propos de moi
+                                        </Link>
                                     </li>
 
                                     <li>

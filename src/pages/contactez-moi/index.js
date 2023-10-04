@@ -236,7 +236,7 @@ const Contact = () => {
                                             <FontAwesomeIcon icon={faEnvelope} />
                                         </div>
                                         <div className="info-content">
-                                            <a href="mailto:jojomodeste52@gmail.com">
+                                            <a href="mailto:djedeminmodeste@gmail.com">
                                                 djedeminmodeste@gmail.com
                                             </a>
                                         </div>
@@ -286,9 +286,10 @@ const Contact = () => {
                                 <div className="field mb-4 field-object">
                                     <select value={objet.sujet} onChange={changeField} name='sujet' className={'form-select ' + (error.sujet ? ' border border-danger ' : '')} placeholder='Sujet'>
                                         <option value="">Sujet</option>
-                                        <option value="commande">Commander un service</option>
+                                        <option value="commande">Interressé par mes services</option>
                                         <option value="hired">M'embaucher</option>
-                                        <option value="team">Former une équipe sur un projet</option>
+                                        <option value="team">travailler ensemble sur un projet</option>
+                                        <option value="others">Autres</option>
                                     </select>
                                     {
                                         error.sujet && <small className='text-danger'>{error.sujet}</small>

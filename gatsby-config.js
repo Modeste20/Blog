@@ -7,6 +7,7 @@ module.exports = {
         ok:'down'
     },
     plugins: [
+      "gatsby-plugin-anchor-links",
         // to use StaticImage for static image
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",

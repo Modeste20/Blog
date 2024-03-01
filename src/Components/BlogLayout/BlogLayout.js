@@ -6,6 +6,7 @@ import delve from 'dlv'
 import "./BlogLayout.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import MdxProvider from './../MdxProvider/MdxProvider'
+import { Helmet } from "react-helmet"
 
 
 const BlogLayout = ({ data }) => {
@@ -13,6 +14,9 @@ const BlogLayout = ({ data }) => {
     const image = getImage(delve(data,'mdx.frontmatter.image_hero_large'))
     return (
       <Layout pageTitle={'Blog'}>
+        <Helmet>
+          <title>{delve(data,'mdx.frontmatter.title') || "Blog | Landry"}</title>
+        </Helmet>
       <section className="blog-article">
         <h1>{delve(data,'mdx.frontmatter.title')}</h1>
         <div className="article-information">

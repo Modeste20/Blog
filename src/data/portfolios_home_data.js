@@ -67,7 +67,7 @@ const PROJECTS = [
             }
         },
         description:"Ce projet est le présent site web. Il s'agit de mon portfolio qui rassemble à la fois mes compétences,mon parcours, mes certifications, un blog et surtout les projets dont je suis le plus fier.",
-        skills:['Bootstrap','Réact','Gatsby'],
+        skills:['Bootstrap','React','Gatsby'],
         url:'https://djedeminmodeste.vercel.app/'
     },
     {

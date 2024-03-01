@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import Carousel from "../Components/Carousel"
 import Layout from "../Components/Layout/Layout"
 import data from "../data/testimonials_home_data"
@@ -104,6 +105,15 @@ const IndexPage = () => {
 
   return (
     <Layout>
+
+      {/* META DONNEES */}
+
+      <Helmet>
+        <title>
+          Mon portfolio | Landry
+        </title>
+      </Helmet>
+
       <div className="landry-portfolio-home">
 
         {/* BANNIERE */}

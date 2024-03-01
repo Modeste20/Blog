@@ -22,9 +22,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:url(./../../images/banner-blog-lg.jpg);
+    background-image:url(./../../images/banner-blog-sm.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom left;
 }
 
 .banner-blog .banner-blog-image::before{
@@ -38,15 +39,19 @@
     bottom:0;
     z-index:-2;
     display: block;
-    background-color: rgba(0,0,0,.65);
+    background-color: rgba(0,0,0,.75);
 
 }
 
-@media all and (max-width:900px){
+@media all and (min-width:768px){
     .banner-blog .banner-blog-image{
-        background:url(./../../images/banner-blog-md.jpg);
-        background-size: cover;
+        background-image:url(./../../images/banner-blog-md.jpg);
+    }
+}
 
+@media all and (min-width:992px){
+    .banner-blog .banner-blog-image{
+        background-image:url(./../../images/banner-blog-lg.jpg);
     }
 }
 /*

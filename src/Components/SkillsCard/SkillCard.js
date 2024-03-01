@@ -48,7 +48,7 @@ export const SKILLS = [
         title:'Frameworks frontend',
         icon:<FontAwesomeIcon icon={faHtml5} />,
         children:(
-            <p>La maîtrise d'outils ou frameworks frontend  tels que <strong>Bootstrap</strong>, <strong>Tailwind CSS</strong> et <strong>Réact </strong>
+            <p>La maîtrise d'outils ou frameworks frontend  tels que <strong>Bootstrap</strong>, <strong>Tailwind CSS</strong> et <strong>React </strong>
             permet de simplifier et d'accélérer le développement d'applications web et d'interfaces utilisateur interactives.
             </p>
         )

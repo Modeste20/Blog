@@ -9,8 +9,8 @@ const FORMATIONS = [
     title:'Début de mon parcours de développeur web',
     children:(
       <p>
-        C'est sur la plateforme OpenClassroom que j'ai commencé mon parcours de développeur notemment avec le cours gratuit <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3" target='_blank'>Créez votre site web avec HTML5 et CSS3"</a>.
-        Ensuite, le cours <a href='https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript/2724891-deboguer-votre-code-partie-1-3' target='_blank'>Dynamisez vos sites web avec JavaScript</a> suivi sur la même plateforme m'a permis
+        C'est sur la plateforme OpenClassroom que j'ai commencé mon parcours de développeur notemment avec le cours gratuit <strong>Créez votre site web avec HTML5 et CSS3</strong> {/*<a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3" target='_blank'>Créez votre site web avec HTML5 et CSS3</a>*/}.
+        Ensuite, le cours <strong>Dynamisez vos sites web avec JavaScript</strong> {/*<a href='https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec-javascript/2724891-deboguer-votre-code-partie-1-3' target='_blank'>Dynamisez vos sites web avec JavaScript</a>*/} suivi sur la même plateforme m'a permis
         de commencer l'apprentissage du JavaScript.
       </p>
     )
@@ -22,8 +22,7 @@ const FORMATIONS = [
       <>
       <p>
         Après avoir acquis mes premières bases en développement web, j'ai commencé à créer mes premières pages et sites web me permettant de pratiquer les connaissances acquises.
-      </p>
-      <p>
+      
         Les nombreuses ressources gratuites en ligne tels que <strong>FreeCodeCamp</strong>, la plateforme <strong>Mozilla Developer Network (MDN)</strong>, <strong>W3Schools</strong> et bien d'autres, m'ont permis d'aborder et de me renseigner sur différentes notions et technologies utiles en développement web.
         Ces ressources m'ont également servis de guide, parfois de point de départ dans mon apprentissage.
       </p>
@@ -36,7 +35,7 @@ const FORMATIONS = [
     children:(
       <p>
         Après l'apprentissage des technologies de base du web, je me suis interressé aux outils frontend. Ces outils permettent de simplifier et d'accélérer le développement d'applications web. Ces outils vont 
-        des préprocesseurs comme postCSS et Sass aux frameworks frontend tels que Bootstrap et Réact passant par les gestionnaires de packages et les bundlers.
+        des préprocesseurs comme postCSS et Sass aux frameworks frontend tels que Bootstrap et React passant par les gestionnaires de packages et les bundlers.
       </p>
     )
   },
@@ -57,7 +56,7 @@ const FORMATIONS = [
     children:(
       <p>
         Après avoir compléter les cours d'introduction au HTML et au CSS sur sololearn, J'ai été certifié par la plateforme comme possédant les compétences 
-        HTML et CSS indispensables à la création des sites web. Mes <a href={'./../images/author.png'} target='_blank'> certificats HTML </a> et <a href="">CSS</a> sont consultables en lignes
+        HTML et CSS indispensables à la création des sites web.<a href={'https://drive.google.com/drive/folders/1CCNfyPTvWxdd14ibprvGDI1N82iiHPjr?usp=sharing'} target='_blank'> Mes certificats HTML et CSS </a> sont consultables en lignes
       </p>
     )
   }

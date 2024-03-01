@@ -1,6 +1,6 @@
 .blog-article{
     width:100%;
-    margin:100px 0 50px 0;
+    margin:50px 0 50px 0;
     padding:30px 12px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .blog-article .article-banner {
-    margin-bottom:20px;
+    margin-bottom:35px;
 }
 
 @media only screen and (min-width:601px){
@@ -42,3 +42,27 @@
         font-size:3.5rem !important;
     }
 }
+
+/* Style for article content*/
+
+.article-content h2{
+    margin:30px 0 10px;
+}
+
+.article-content .strg-lk{
+    font-weight:600;
+    color: var(--bs-secondary) !important;
+}
+
+.article-content .strg-lk:hover{
+    text-decoration: underline !important;
+}
+
+.article-content ul li{
+    list-style: initial !important;
+}
+
+.article-content ol li{
+    list-style: initial !important;
+}
+

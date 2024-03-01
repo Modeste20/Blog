@@ -6,6 +6,7 @@ import { faEnvelope, faMapMarker, faPhone } from '@fortawesome/free-solid-svg-ic
 import isEmail from 'validator/lib/isEmail'
 import { useState } from 'react'
 import Banner from '../../Components/Shared/Banner/Banner'
+import { Helmet } from 'react-helmet'
 
 const Contact = () => {
 
@@ -159,7 +160,7 @@ const Contact = () => {
 
             const formData = new FormData(document.forms['contact'])
             formData.delete('recpatcha')
-            fetch('https://getform.io/f/8cd05551-add6-4a2f-91aa-e9104b11c629', {
+            fetch('https://getform.io/f/nelzx1bK', {
                 method: "POST",
                 body: formData
             })
@@ -206,6 +207,9 @@ const Contact = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>Contact | Landry</title>
+            </Helmet>
             <div className="contact-landry">
                 <Banner title={'Contact'} className='banner-contact' />
                 <section className='section-contact container-md'>

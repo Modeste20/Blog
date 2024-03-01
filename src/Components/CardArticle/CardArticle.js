@@ -22,10 +22,10 @@ const CardArticle = ({blog, url, image_data, image_alt, category, date, title, d
     return (
         <div className={"article "+(!description ? " post-sidebar ":" ") + (blog ? " mx-auto " : "col-12 mx-auto col-sm-9 col-md-6 col-lg-4 px-sm-5")}>
             <div className={" card-article " + (blog ? "row mx-auto justify-content-center" : "")}>
-                <div className={" article-img " +(blog ? "col-12 col-sm-6 col-md-6 col-lg-5" : "")}>
+                <div className={" article-img " +(blog ? "col-12 col-sm-9 col-md-7 col-lg-9 col-xl-5" : "")}>
                     <GatsbyImage image={image} alt={image_alt}  />
                 </div>
-                <div className={" article-content "+(blog ? "col-12 col-sm-6 col-md-6 col-lg-7" : "")}>
+                <div className={" article-content "+(blog ? "col-12 col-sm-9 col-md-5 col-lg-9 col-xl-7" : "")}>
                     <div className="content-head">
                         <div className="category-title tag">
                             {getCategory(category)}

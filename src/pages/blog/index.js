@@ -12,6 +12,7 @@ import slugify from 'slugify'
 import moment from 'moment'
 import 'moment/locale/fr'
 import Banner from '../../Components/Shared/Banner/Banner'
+import { Helmet } from 'react-helmet'
 
 
 let PageSize = 3;
@@ -79,6 +80,10 @@ const Blog = ({ data }) => {
   return (
     <Layout>
 
+      <Helmet>
+        <title>Blog | Landry</title>
+      </Helmet>
+
       {/* BANNIERE */}
 
       <div className="banner banner-blog">
@@ -91,7 +96,7 @@ const Blog = ({ data }) => {
             <h1 style={{ zIndex: '2 !important', color: '#fdfbfdc2' }}>Blog</h1>
             <BreadCrumb />
           </div>
-  </div>
+        </div>
       </div>
 
       {/* ARTICLES */}

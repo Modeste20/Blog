@@ -51,7 +51,7 @@ const BlogNavbar = ({category}) => {
     return (
         <div className="blog-navbar">
             <div className="input-search">
-                <input type="text" className="form-control" id="input-search-articles" placeholder="Rechercher par mots clés" /><br />
+                <input type="text" className="form-control" id="input-search-articles" placeholder="Rechercher par mots clés (Non fonctionnel)" /><br />
                 <button className='btn btn-search btn-btn' title='Rechercher'>
                     <FontAwesomeIcon icon={faSearch} />
                 </button>

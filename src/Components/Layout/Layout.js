@@ -223,11 +223,11 @@ const Layout = ({ children, footer = true }) => {
                                     </li>
 
                                     <li>
-                                        <Link to='/contactez-moi'>Contactez moi</Link>
+                                        <Link to='/contactez-moi'>Contactez-moi</Link>
                                     </li>
 
                                     <li>
-                                        <Link to='/blog'>Mon blog</Link>
+                                        <Link to='/blog'>Blog</Link>
                                     </li>
 
                                 </ul>

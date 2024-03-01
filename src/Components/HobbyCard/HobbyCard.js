@@ -29,7 +29,7 @@ export const HobbyCard = ({icon,title}) => {
 
 export const HOBBIES = [
     {
-        title:'Coding',
+        title:'Programmation',
         icon:code
     },
     {

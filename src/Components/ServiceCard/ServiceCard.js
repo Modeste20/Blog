@@ -11,7 +11,7 @@ const ServiceCard = ({className,link,title,children,icon}) => {
                     <FontAwesomeIcon icon={icon} />
                 </div>
                 <div class="card-body pb-5 px-4">
-                    <h3 class="card-title pt-5 mb-3">
+                    <h3 class="card-title pt-5 mb-4 mt-2">
                             {
                                 title
                             }

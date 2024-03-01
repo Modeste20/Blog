@@ -2,10 +2,14 @@ import { Link } from 'gatsby';
 import React from 'react'
 import Layout from '../Components/Layout/Layout';
 import './404.css'
+import { Helmet } from 'react-helmet';
 
 const P404 = () => {
     return (
         <Layout footer={false}>
+            <Helmet>
+                <title> 😪 Page Introuvable</title>
+            </Helmet>
             <div className="nfound">
                 <div className="container-md">
                     <div className="nfound-row">

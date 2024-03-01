@@ -7,6 +7,14 @@ module.exports = {
         ok:'down'
     },
     plugins: [
+      `gatsby-plugin-react-helmet`,
+      //Favicon
+      {
+        resolve: 'gatsby-plugin-manifest',
+        options: {
+          icon: 'src/images/favicon.png',
+        },
+      },
       "gatsby-plugin-anchor-links",
         // to use StaticImage for static image
         "gatsby-plugin-image",

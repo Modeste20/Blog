@@ -5,7 +5,7 @@ import Carousel from "../Components/Carousel"
 import Layout from "../Components/Layout/Layout"
 import data from "../data/testimonials_home_data"
 import Profil from './../images/Landry.png'
-import BiographyImage from './../images/biography-image.jpg'
+import BiographyImage from './../images/biography-image.png'
 
 import './home.css'
 import SkillCard, { SKILLS } from "../Components/SkillsCard/SkillCard"

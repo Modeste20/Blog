@@ -217,7 +217,7 @@ const Contact = () => {
                         <div className="text">
                             <p>
                                 Que vous soyez designer d'interface utilisateur ou développeur web souhaitant qu'on travaille ensemble sur un projet ou un particulier,
-                                une structure, un startup interressé par les différentes services que je propose, entrez en contact avec moi à l'aide des informations ci-dessous.
+                                une structure, un startup interressé par les différents services que je propose, entrez en contact avec moi à l'aide des informations ci-dessous.
                                 Mon inbox est toujours ouvert et considérez-moi pour de futurs emplois et opportunités.
                             </p>
                         </div>
